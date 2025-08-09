@@ -1,0 +1,46 @@
+<!--junior-2025-j1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Junior Problem 1</title>
+    <link rel="stylesheet" href="../../problems.css">
+</head>
+
+<body>
+    <header>
+        <h1>Junior Problem 1</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <a href="../../../index.html" class="back">Back</a>
+        </nav>
+        
+        <h3>CCC '25 J1 - Roller Coaster Ride</h3>
+        <a href="https://dmoj.ca/problem/ccc25j1" target="_blank" rel="noopener noreferrer" class="dmoj">
+            View or submit this problem on DOMJ
+        </a>
+        <p id="guide">Possible approach</p>
+        <button id="guide-btn" >Show</button>
+        <p id="strategy" style="display: none;">
+            Type here...
+        </p>
+    </main>
+    <script>
+        const btn = document.getElementById('guide-btn');
+        let count = 1;
+        btn.addEventListener('click', function() {
+            if(count===1){
+                btn.textContent="Hide";
+                count=0;
+                document.getElementById("strategy").style.display="block";
+            }else{
+                btn.textContent="Show";
+                count=1;
+                document.getElementById("strategy").style.display="none";
+            }
+        });
+    </script>
+
+</body>
+</html>

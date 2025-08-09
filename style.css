@@ -1,0 +1,31 @@
+/*main*/
+body{
+    background-color: #f9e4b7;
+}
+section{
+    margin-left: 250px;
+    margin-top: 150px;
+}
+/*navbar*/
+.navbar{
+    margin-left: 250px;
+    font-size: 20px;
+}
+#senior{
+    margin-left: 50px;
+}
+/*CEMC Past Contests*/
+#cemc{
+    margin-left: 250px;
+    font-size: 20px;
+}
+#introduction{
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}

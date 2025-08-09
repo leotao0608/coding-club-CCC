@@ -1,0 +1,43 @@
+.dmoj{
+    margin-left: 250px;
+    font-size: 20px;
+}
+.back{
+    margin-left: 250px;
+    font-size: 20px;
+}
+body{
+    background-color: #f9e4b7;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+h3{
+    text-align: center;
+    font-size: 27px;
+}
+
+p{
+    margin-left: 250px;
+    font-size: 18px;
+}
+#guide{
+    margin-top: 50px;
+    margin-left: 250px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#guide-btn{
+    margin-left: 250px;
+    font-size: 15px;
+    height: 30px;
+    width: 64px;
+    background-color: #8ebff7;
+    color: white;
+    border: 1px solid #8ebff7;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
