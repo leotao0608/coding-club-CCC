@@ -32,7 +32,7 @@ p{
     margin-left: 250px;
     font-size: 15px;
     height: 30px;
-    width: 64px;
+    width: 104px;
     background-color: #8ebff7;
     color: white;
     border: 1px solid #8ebff7;
@@ -40,4 +40,21 @@ p{
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+#code-btn{
+    margin-left: 250px;
+    font-size: 15px;
+    height: 30px;
+    width: 104px;
+    background-color: #8ebff7;
+    color: white;
+    border: 1px solid #8ebff7;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+pre{
+    margin-left: 250px;
+    font-size: 15px;
 }

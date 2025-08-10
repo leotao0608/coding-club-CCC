@@ -1,30 +1,35 @@
-<!--junior-2025-j1-->
+<!--junior-2025-j2-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Junior Problem 1</title>
+    <title>Junior Problem 2</title>
     <link rel="stylesheet" href="../../problems.css">
 </head>
 
 <body>
     <header>
-        <h1>Junior Problem 1</h1>
+        <h1>Junior Problem 2</h1>
     </header>
     <main>
         <nav class="navbar">
             <a href="../../index.html" class="back">Back</a>
         </nav>
         
-        <h3>CCC '25 J1 - Roller Coaster Ride</h3>
-        <a href="https://dmoj.ca/problem/ccc25j1" target="_blank" rel="noopener noreferrer" class="dmoj">
+        <h3>CCC '25 J2 - Donut Shop</h3>
+        <a href="https://dmoj.ca/problem/ccc25j2" target="_blank" rel="noopener noreferrer" class="dmoj">
             View or submit this problem on DOMJ
         </a>
         <p> </p>
         <button id="guide-btn" >Show Guide</button>
         <pre id="strategy" style="display: none;">
-A solution to the first problem requires a conditional statement such as an ifstatement. When the condition 
-N<=C*P is true, yes should be printed, and otherwise no should be printed.
+The second problem asks you to determine the number of donuts remaining when the donut shop closes. This 
+requires you to store the initial number of donuts D and then update the total number of donuts remaining
+after each event. Since we are given the number of events, E, we can use a for loop to do this. For each 
+iteration of the loop, we can read two lines of input and use a conditional statement to determine whether
+to add or subtract from the current donut total. Note that the symbol + or - must be represented by a 
+character or string type, and the quantity of donuts associated with the event should be represented by an
+integer type.
         </pre>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
@@ -35,13 +40,21 @@ N<=C*P is true, yes should be printed, and otherwise no should be printed.
 #include&lt;iostream&gt;
 using namespace std;
 int main(){
-    int n, c, p;
-    cin>>n>>c>>p;
-    if(n<=(c*p)){
-        cout<<"yes";
-    }else{
-        cout<<"no";
+    int d, e;
+    cin&gt;&gt;d&gt;&gt;e;
+    int total=d;
+    for(int i=0;i&lt;e;i++){
+        char c;
+        cin&gt;&gt;c;
+        int q;
+        cin&gt;&gt;q;
+        if(c=='+'){
+            total+=q;
+        }else{
+            total-=q;
+        }
     }
+    cout&lt;&lt;total;
     return 0;
 }
         </code></pre>
