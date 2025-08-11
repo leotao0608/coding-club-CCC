@@ -4,7 +4,7 @@ body{
 }
 section{
     margin-left: 250px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 /*navbar*/
 .navbar{
@@ -27,5 +27,13 @@ h1{
     font-size: 40px;
 }
 h2{
+    font-size: 30px;
+}
+.tutorial{
+    margin-left: 250px;
+    font-size: 20px;
+}
+p{
+    margin-left: 250px;
     font-size: 30px;
 }

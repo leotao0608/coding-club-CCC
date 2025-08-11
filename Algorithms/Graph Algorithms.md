@@ -1,4 +1,4 @@
-# Graph Algrithms
+# Graph Algorithms
 Many programming problems can be solved by modeling the problem as a graph
 problem and using an appropriate graph algorithm. A typical example of a graph
 is a network of roads and cities in a country. Sometimes, though, the graph is
