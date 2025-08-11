@@ -203,4 +203,64 @@ auto a = 10; //which works the same
 
 <br><br>
 # C++ Operators
-https://www.w3schools.com/cpp/cpp_operators.asp
+Operators are used to perform operations on variables and values.
+Some common operators include:
+
+| Operator | Name          | Description                                  |
+|----------|--------------|----------------------------------------------|
+| `+`      | Addition     | Adds together two values                     |
+| `-`      | Subtraction  | Subtracts one value from another              |
+| `*`      | Multiplication | Multiplies two values                        |
+| `/`      | Division     | Divides one value by another                  |
+| `%`      | Modulus      | Returns the division remainder                |
+| `++`     | Increment    | Increases the value of a variable by 1        |
+| `--`     | Decrement    | Decreases the value of a variable by 1        |
+
+Examples:
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+  int a, b;
+  a = 5, b = 10;
+  int c = a + b;
+  cout << c << endl;		//15
+  c = a - b;
+  cout<<c<<endl;            //-5
+  c = a * b;
+  cout << c << endl;		//50
+  c = b / a;
+  cout << c << endl;		//2
+  int x = 13, y = 4;
+  c = x % y;
+  cout << c << endl;		//1
+  c++;
+  cout << c << endl;		//2
+  c--;
+  cout << c << endl;		//1
+  return 0;
+}
+```
+
+## `i++` and `++i`
+`++` means increment by 1. However, although `i++` and `++i` both increases i by 1, they are different in some cases.
+### `++i` - Pre-increment
+Order of operations:
+- Increase i by 1.
+- Use the new value of i.  
+For example:
+```C++
+int x = 5;
+y = ++x;    //x first increase by 1, then is assigned to y
+cout << y;  //Output: 6
+```
+### `i++` - Post increment
+Order of operations:
+- Use the current value of i.
+- Increase i by 1 afterward.
+For example:
+```C++
+int x = 5;
+y = x++;    //the value of x is assigned to y first, then increase by 1
+cout << y;  //Output: 5
+```
