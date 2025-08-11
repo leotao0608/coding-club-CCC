@@ -4,6 +4,9 @@ Table of contents:
 3. [C++ Inputs and Outputs](#c-inputs-and-outputs)
 4. [C++ Comments](#c-comments)
 5. [C++ Variables](#c-variables)
+6. [C++ Operators](#c-operators)
+7. [C++ Conditional Statements](#c-conditional-statements)
+8. [C++ Loops](#c-loops)
 <br><br>
 # C++ syntax
 Start by the following code to understand the language better.
@@ -204,8 +207,10 @@ auto a = 10; //which works the same
 <br><br>
 # C++ Operators
 Operators are used to perform operations on variables and values.
-Some common operators include:
 
+## Arithmetic Operators
+Arithmetic operators are used to perform common mathematical operations.  
+Some common operators include:
 | Operator | Name          | Description                                  |
 |----------|--------------|----------------------------------------------|
 | `+`      | Addition     | Adds together two values                     |
@@ -242,9 +247,9 @@ int main() {
 }
 ```
 
-## `i++` and `++i`
+### `i++` and `++i`
 `++` means increment by 1. However, although `i++` and `++i` both increases i by 1, they are different in some cases.
-### `++i` - Pre-increment
+#### `++i` - Pre-increment
 Order of operations:
 - Increase i by 1.
 - Use the new value of i.  
@@ -254,7 +259,7 @@ int x = 5;
 y = ++x;    //x first increase by 1, then is assigned to y
 cout << y;  //Output: 6
 ```
-### `i++` - Post increment
+#### `i++` - Post increment
 Order of operations:
 - Use the current value of i.
 - Increase i by 1 afterward.
@@ -264,3 +269,229 @@ int x = 5;
 y = x++;    //the value of x is assigned to y first, then increase by 1
 cout << y;  //Output: 5
 ```
+
+## Assignment Operators
+Assignment operators are used to assign values to variables.  
+Here are some common assignment operators:  
+| Operator | Example  | Same As      |
+|----------|----------|--------------|
+| `=`      | `x = 5`  | `x = 5`      |
+| `+=`     | `x += 3` | `x = x + 3`  |
+| `-=`     | `x -= 3` | `x = x - 3`  |
+| `*=`     | `x *= 3` | `x = x * 3`  |
+| `/=`     | `x /= 3` | `x = x / 3`  |
+| `%=`     | `x %= 3` | `x = x % 3`  |
+Examples:
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 5;
+    int b = 3;
+    a += b;  // a = a + b
+    cout << a << endl; // 8
+    a -= b;  // a = a - b
+    cout << a << endl; // 5
+    a *= b;  // a = a * b
+    cout << a << endl; // 15
+    a /= b;  // a = a / b
+    cout << a << endl; // 5
+    a %= b;  // a = a % b
+    cout << a << endl; // 2
+    return 0;
+}
+```
+
+## Comparison Operators
+Comparison operators are used to compare two values (or variables).  
+The **return value** of a comparison is either `1` or `0`, which means `true` (1) or `false` (0), which are **boolean values**
+| Operator | Example                       | Example     |
+|----------|--------------------------------|-------------|
+| `==`     | Equal to                      | `x == y`    |
+| `!=`     | Not equal                     | `x != y`    |
+| `>`      | Greater than                  | `x > y`     |
+| `<`      | Less than                     | `x < y`     |
+| `>=`     | Greater than or equal to      | `x >= y`    |
+| `<=`     | Less than or equal to         | `x <= y`    |
+
+Example:  
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int x = 5;
+    int y = 10;
+    cout << (x == y) << endl;  // Equal to -> 0 (false)
+    cout << (x != y) << endl;  // Not equal -> 1 (true)
+    cout << (x > y) << endl;   // Greater than -> 0 (false)
+    cout << (x < y) << endl;   // Less than -> 1 (true)
+    cout << (x >= y) << endl;  // Greater than or equal to -> 0 (false)
+    cout << (x <= y) << endl;  // Less than or equal to -> 1 (true)
+    return 0;
+}
+
+```
+
+## Logical Operators
+Logical operators are used to determine the logic between variables or values.  
+Here are three logical operators:
+| Operator | Name        | Description                                         | Example                     |
+|----------|-------------|-----------------------------------------------------|-----------------------------|
+| `&&`     | Logical and | Returns true if both statements are true            | `x < 5 && x < 10`           |
+| `||`     | Logical or  | Returns true if one of the statements is true        | `x < 5 || x < 4`            |
+| `!`      | Logical not | Reverse the result, returns false if result is true  | `!(x < 5 && x < 10)`        |
+Example:  
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int x = 5;
+    int y = 10;
+    // Logical AND (&&)
+    cout << (x < 5 && x < 10) << endl;  // 0 (false, because x < 5 is false)
+    cout << (x < 6 && y > 5) << endl;   // 1 (true, both conditions are true)
+    // Logical OR (||)
+    cout << (x < 5 || x < 4) << endl;   // 0 (false, both conditions are false)
+    cout << (x < 6 || y < 5) << endl;   // 1 (true, first condition is true)
+    // Logical NOT (!)
+    cout << !(x < 5 && x < 10) << endl; // 1 (true, negation of false)
+    cout << !(x < 6 && y > 5) << endl;  // 0 (false, negation of true)
+    return 0;
+}
+```
+
+# C++ Conditional statements
+A **conditional statement** is a programming construct that lets a program make decisions by executing different code blocks depending on whether a given condition is true or false.
+## `if` statement
+Use the `if` statement to specify a block of C++ code to be executed if a condition is true.
+```C++
+if(condition){
+    // block of code to be executed if the condition is true
+}
+```
+Example 1:
+```C++
+if (20 > 18) {
+  cout << "20 is greater than 18";
+}
+```
+Example 2:
+```C++
+int x = 20;
+int y = 18;
+if (x > y) {
+  cout << "x is greater than y";
+}
+```
+
+## `else` statement
+Use the `else` statement to specify a block of code to be executed if the condition is false.
+```C++
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+```
+Note that else cannot appear alone and must be behind an if statement.
+Example:
+```C++
+int time = 20;
+if (time < 18) {
+  cout << "Good day.";
+} else {
+  cout << "Good evening.";
+}
+// Outputs "Good evening."
+```
+
+## `else if` statement
+Use the `else if` statement to specify a new condition if the first condition is false.
+```C++
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+```
+There can be multiple `else if` statements but only one pair of `if` and `else` statements.
+Example:
+```C++
+int time = 22;
+if (time < 10) {
+  cout << "Good morning.";
+} else if (time < 20) {
+  cout << "Good day.";
+} else {
+  cout << "Good evening.";
+}
+// Outputs "Good evening."
+```
+
+## Short hand `if` `else` (Ternary Operator)
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.  
+It can be used to replace multiple lines of code with a single line, and is often used to replace simple `if` `else` statements:  
+`variable = (condition) ? expressionTrue : expressionFalse;`  
+Instead of writing:
+```C++
+int time = 20;
+if (time < 18) {
+  cout << "Good day.";
+} else {
+  cout << "Good evening.";
+}
+```
+You can simply write:
+```C++
+int time = 20;
+string result = (time < 18) ? "Good day." : "Good evening.";
+cout << result;
+```
+
+<br><br>
+# C++ Loops
+Loops can execute a block of code as long as a specified condition is reached.  
+Loops are handy because they save time, reduce errors, and they make code more readable.  
+## `while` Loop
+The `while` loop loops through a block of code as long as a specified condition is `true`:
+```C++
+while (condition) {
+  // code block to be executed if condition is true
+}
+```
+In the example below, the code in the loop will run, over and over again, as long as a variable (`i`) is less than 5:
+```C++
+int i = 0;
+while (i < 5) {
+  cout << i << "\n";
+  i++;
+}
+```
+Note: Do not forget to increase the variable used in the condition (`i++`), otherwise the loop will never end!  
+>`i` is commonly used in loops, which stands for 'iterator' and 'index'.
+
+## `do while` Loop
+The `do while` loop is a variant of the `while` loop. This loop will execute the code block once, before checking if the condition is true. Then it will repeat the loop as long as the condition is true.
+```C++
+do {
+  // code block to be executed
+}
+while (condition);
+```
+Note: The semicolon `;` after the while condition is **required**!
+
+Example:
+```C++
+int i = 0;
+do {
+  cout << i << "\n";
+  i++;
+}
+while (i < 5);
+```
+The `do while` loop runs at least once even if the condition is false from the begining.
+This is different from a regular `while` loop, which would skip the loop entirely if the condition is false at the start.  
+<br>
+We usually use `while` or `do while` loops when we are given a condition and don't know exactly how many times we want to run the loop for.
