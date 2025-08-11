@@ -1,12 +1,34 @@
 Table of contents:
 1. [C++ syntax](#c-syntax)
+    + [Use of Semi-colons](#use-of-semicolons)
 2. [C++ Statements](#c-statements)
 3. [C++ Inputs and Outputs](#c-inputs-and-outputs)
+    + [Output with `cout`](#output-with-cout)
+    + [Input with `cin`](#input-with-cin)
 4. [C++ Comments](#c-comments)
 5. [C++ Variables](#c-variables)
+    + [Declaring Variables](#declaring-variables)
+    + [Variable Naming Rules](#variable-naming-rules)
+    + [Assigning Values](#assigning-values)
+    + [Constant Variables](#constant-variables)
+    + [`auto` keyword](#auto-keyword)
 6. [C++ Operators](#c-operators)
+    + [Arithmetic Operators](#arithmetic-operators)
+    + [`i++` and `++i`](#i-and-i)
+    + [Assignment Operators](#assignment-operators)
+    + [Comparison Operators](#comparison-operators)
+    + [Logical Operators](#logical-operators)
 7. [C++ Conditional Statements](#c-conditional-statements)
+    + [`if` statement](#if-statement)
+    + [`else` statement](#else-statement)
+    + [`else if` statement](#else-if-statement)
+    + [Short hand `if` `else` (Ternary Operator)](#short-hand-if-else-ternary-operator)
 8. [C++ Loops](#c-loops)
+    + [`while` Loop](#while-loop)
+    + [`do while` Loop](#do-while-loop)
+    + [`for` Loop](#for-loop)
+    + [Ranged based `for` Loop](#ranged-based-for-loop)
+    + [`break` and `continue`](#break-and-continue)
 <br><br>
 # C++ syntax
 Start by the following code to understand the language better.
@@ -495,3 +517,82 @@ The `do while` loop runs at least once even if the condition is false from the b
 This is different from a regular `while` loop, which would skip the loop entirely if the condition is false at the start.  
 <br>
 We usually use `while` or `do while` loops when we are given a condition and don't know exactly how many times we want to run the loop for.
+
+## `for` Loop
+When you know exactly how many times you want to loop through a block of code, use the for `loop` instead of a `while` loop.
+```C++
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+```
+- Statement 1 is executed (one time) before the execution of the code block.
+- Statement 2 defines the condition for executing the code block.
+- Statement 3 is executed (every time) after the code block has been executed.
+Example 1:
+```C++
+for (int i = 0; i <  n; i++) {
+  cout << i << "\n";
+}
+```
+- Statement 1 sets a variable before the loop starts: `int i = 0`
+- Statement 2 defines the condition for the loop to run: `i < n`. If the condition is true, the loop will start over again, if it is false, the loop will end.
+- Statement 3 increases a value each time the code block in the loop has been executed: `i++`  
+
+Example 2: 
+```C++
+for (int i = 0; i <= 10; i = i + 2) {
+  cout << i << "\n";          // All even numbers between 0~10 are printed.
+}
+```
+
+Example 3:
+```C++
+int sum = 0;
+for (int i = 1; i <= 5; i++) {
+  sum = sum + i;
+}
+cout << "Sum is " << sum; //This example calculates the sum of numbers from 1 to 5:
+```
+
+Example 4:
+```C++
+for (int i = 5; i > 0; i--) {
+  cout << i << "\n";    //This example prints a countdown from 5 to 1:
+}
+```
+## Ranged based `for` Loop
+```C++
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+```
+Example:
+```C++
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i : myNumbers) {
+  cout << i << " ";
+}
+//Output: 10 20 30 40 50
+```
+## `break` and `continue`
+The `break` statement can also be used to jump out of a loop.
+Example:
+```C++
+for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;          //In this example, the loop breaks at i == 4 and exits the loop(the loops ends)
+  }
+  cout << i << " ";
+}
+//Output: 0 1 2 3
+```
+The `continue` statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+```C++
+for (int i = 1; i <= 10; i++) {
+  if (i == 4) {
+    continue;         //This example skips the value of 4:
+  }
+  cout << i << "\n";
+}
+// Output: 1 2 3 5 6 7 8 9 10
+```
