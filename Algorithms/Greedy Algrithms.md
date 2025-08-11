@@ -10,9 +10,9 @@ In this problem, the correct greedy solution is to continually flip the longest 
 
 ## Implementation
 ### Time complexity: $O(N)$
-<pre>
-#include &lt;iostream&gt;
-#include &lt;vector&gt;
+```cpp
+#include <iostream>
+#include <vector>
 using namespace std;
 int main() {
 	int cow_num;
@@ -42,7 +42,7 @@ int main() {
 	}
 	cout << min_flips << endl;
 }
-</pre>
+```
 Note that not all greedy problems necessarily require mathematical proofs of correctness. It is often sufficient to intuitively convince yourself your algorithm is correct.
 Sometimes, if the algorithm is easy enough to implement, you don't even need to convince yourself it's correct; just code it and see if it passes.
 

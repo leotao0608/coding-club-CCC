@@ -3,8 +3,8 @@
 ## Static Arrays
 Sorting refers to arranging items in some particular order.  
 To sort static arrays, use `sort(arr, arr + N)` where $N$ is the  number of elements to be sorted. The range can also be specified by replacing `arr` ans `arr + N` with the intended range. For example, `sort(arr + 1, arr + 4)` sorts indices $[1, 4)$.
-<pre>
-#include &lt;bits/stdc++.h&gt;
+```cpp
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -20,11 +20,11 @@ int main() {
 	for (int i = 0; i < N; i++)
         cout << arr2[i] << " ";  // 5 1 2 3 4
 }
-</pre>
+```
 ## Dynamic Arrays
 In order to sort a dynamic array, use `sort(v.begin(), v.end())`. The default sort function sorts the array in ascending order. Similarly, we can specify the range. For example,`sort(v.begin() + 1, v.begin() + 4)` sorts indices $[1, 4)$.
-<pre>
-#include &lt;bits/stdc++.h&gt;
+```cpp
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
 	vector<int> v{5, 1, 3, 2, 4};
@@ -43,11 +43,11 @@ int main() {
     }
 	cout << endl;
 }
-</pre>
+```
 ## Dynamic Arrays of Pairs & Tuples
 By default, C++ pairs are sorted by first element and then second element in case of a tie.
-<pre>
-#include &lt;bits/stdc++.h&gt;
+```cpp
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
 	vector<pair<int, int>> v{{1, 5}, {2, 3}, {1, 2}};
@@ -63,7 +63,7 @@ int main() {
         cout << p.first << " " << p.second << endl;
     }
 }
-</pre>
+```
 ## Practice Questions (Easy to Hard)
 1. [Distinct Numbers](https://cses.fi/problemset/task/1621)
 2. [Playing in a Casino](https://codeforces.com/contest/1808/problem/B)
