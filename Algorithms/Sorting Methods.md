@@ -50,7 +50,7 @@ By default, C++ pairs are sorted by first element and then second element in cas
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-	vector<pair<int, int>> v{{1, 5}, {2, 3}, {1, 2}};
+	vector<pair<int, int>> v{ {1, 5}, {2, 3}, {1, 2} };
 	sort(v.begin(), v.end());
 
 	/*
