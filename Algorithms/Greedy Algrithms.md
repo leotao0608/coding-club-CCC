@@ -46,8 +46,6 @@ int main() {
 Note that not all greedy problems necessarily require mathematical proofs of correctness. It is often sufficient to intuitively convince yourself your algorithm is correct.
 Sometimes, if the algorithm is easy enough to implement, you don't even need to convince yourself it's correct; just code it and see if it passes.
 
-## [Other sources](https://usaco.guide/CPH.pdf#page=67)
-
 ## Practice Problems
 1. [Watching Mooloo](http://www.usaco.org/index.php?page=viewproblem2&cpid=1301)
 2. [Cow Tipping](http://www.usaco.org/index.php?page=viewproblem2&cpid=689)
