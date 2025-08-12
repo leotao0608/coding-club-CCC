@@ -1,0 +1,124 @@
+<!--senior-2025-s2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senior Problem 2</title>
+    <link rel="stylesheet" href="../../problems.css">
+</head>
+
+<body>
+    <header>
+        <h1>Senior Problem 2</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <a href="../../index.html" class="back">Back</a>
+        </nav>
+        
+        <h3>CCC '25 S2 - Cryptogram Cracking Club</h3>
+        <a href="https://dmoj.ca/problem/ccc25s2" target="_blank" rel="noopener noreferrer" class="dmoj">
+            View or submit this problem on DOMJ
+        </a>
+        <p> </p>
+        <button id="guide-btn" >Show Guide</button>
+        <pre id="strategy" style="display: none;">
+...
+        </pre>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <button id="code-btn" >Show Code</button>
+        <pre id="code" style="display:none;background-color: #f9e4b7;"><code class="language-cpp">
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef unsigned long long ll;
+int main() {
+    string S;
+    ll c;
+    cin&gt;&gt;S&gt;&gt;c;
+    vector&lt;char&gt; lstChar;
+    vector&lt;ll&gt; lstCount;
+    string num = "";
+    for (char x:S) {
+        if ((int)x&lt;48||(int)x&gt;57) {
+            if (!num.empty()) {
+            	ll pq=0;
+            	ll jin=1;
+            	for(int i=num.length()-1;i&gt;=0;i--){
+            		pq+=jin*((int)num[i]-48);
+            		jin*=10;
+				}
+				if(pq==0){
+					lstChar.pop_back();
+					
+				}
+                else lstCount.push_back(pq);
+                num="";
+            }
+            lstChar.push_back(x);
+        } else {
+            num += x;
+        }
+    }
+	if (!num.empty()) {
+
+        ll pq=0;
+        ll jin=1;
+        for(int i=num.length()-1;i&gt;=0;i--){
+			pq+=jin*((int)num[i]-48);
+    		jin*=10;
+		}
+		lstCount.push_back(pq);
+    }
+    ll sumOne = 0;
+    for (ll n : lstCount) {
+        sumOne += n;
+    }
+    c = (c) % sumOne;
+    c+=1;
+    ll i = 0;
+    while (true) {
+        if (c &lt;= lstCount[i]) {
+            cout &lt;&lt; lstChar[i];
+            return 0;
+        }
+        c -= lstCount[i];
+        i++;
+    }
+    return 0;
+}
+    </code></pre>
+    </main>
+    <script>
+        const guide_btn = document.getElementById('guide-btn');
+        const code_btn=document.getElementById('code-btn');
+        let guide_count = 1;
+        let code_count = 1;
+        guide_btn.addEventListener('click', function() {
+            if(guide_count===1){
+                guide_btn.textContent="Hide Guide";
+                guide_count=0;
+                document.getElementById("strategy").style.display="block";
+            }else{
+                guide_btn.textContent="Show Guide";
+                guide_count=1;
+                document.getElementById("strategy").style.display="none";
+            }
+        });
+        code_btn.addEventListener('click', function() {
+            if(code_count===1){
+                code_btn.textContent="Hide Code";
+                code_count=0;
+                document.getElementById("code").style.display="block";
+            }else{
+                code_btn.textContent="Show Code";
+                code_count=1;
+                document.getElementById("code").style.display="none";
+            }
+        });
+    </script>
+
+</body>
+</html>

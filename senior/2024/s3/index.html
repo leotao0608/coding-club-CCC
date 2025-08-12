@@ -1,0 +1,67 @@
+<!--senior-2025-s3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senior Problem 3</title>
+    <link rel="stylesheet" href="../../problems.css">
+</head>
+
+<body>
+    <header>
+        <h1>Senior Problem 3</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <a href="../../index.html" class="back">Back</a>
+        </nav>
+        
+        <h3>CCC '24 S2 - Heavy-Light Composition</h3>
+        <a href="https://dmoj.ca/problem/ccc24s3" target="_blank" rel="noopener noreferrer" class="dmoj">
+            View or submit this problem on DOMJ
+        </a>
+        <p> </p>
+        <button id="guide-btn" >Show Guide</button>
+        <pre id="strategy" style="display: none;">
+...
+        </pre>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <button id="code-btn" >Show Code</button>
+        <pre id="code" style="display:none;background-color: #f9e4b7;"><code class="language-cpp">
+...
+    </code></pre>
+    </main>
+    <script>
+        const guide_btn = document.getElementById('guide-btn');
+        const code_btn=document.getElementById('code-btn');
+        let guide_count = 1;
+        let code_count = 1;
+        guide_btn.addEventListener('click', function() {
+            if(guide_count===1){
+                guide_btn.textContent="Hide Guide";
+                guide_count=0;
+                document.getElementById("strategy").style.display="block";
+            }else{
+                guide_btn.textContent="Show Guide";
+                guide_count=1;
+                document.getElementById("strategy").style.display="none";
+            }
+        });
+        code_btn.addEventListener('click', function() {
+            if(code_count===1){
+                code_btn.textContent="Hide Code";
+                code_count=0;
+                document.getElementById("code").style.display="block";
+            }else{
+                code_btn.textContent="Show Code";
+                code_count=1;
+                document.getElementById("code").style.display="none";
+            }
+        });
+    </script>
+
+</body>
+</html>

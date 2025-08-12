@@ -1,0 +1,83 @@
+<!--senior-2020-s1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senior Problem 1</title>
+    <link rel="stylesheet" href="../../problems.css">
+</head>
+
+<body>
+    <header>
+        <h1>Senior Problem 1</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <a href="../../index.html" class="back">Back</a>
+        </nav>
+        
+        <h3>CCC '20 S1 - Surmising a Sprinter's Speed</h3>
+        <a href="https://dmoj.ca/problem/ccc20s1" target="_blank" rel="noopener noreferrer" class="dmoj">
+            View or submit this problem on DOMJ
+        </a>
+        <p> </p>
+        <button id="guide-btn" >Show Guide</button>
+        <pre id="strategy" style="display: none;">
+...
+        </pre>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <button id="code-btn" >Show Code</button>
+        <pre id="code" style="display:none;background-color: #f9e4b7;"><code class="language-cpp">
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+	int N;
+	cin&gt;&gt;N;
+	vector&lt;pair&lt;long long,long long&gt;&gt; ts(N);
+	for(int i=0;i&lt;N;i++){
+		cin&gt;&gt;ts[i].first&gt;&gt;ts[i].second;
+	}
+	sort(ts.begin(),ts.end());
+	double ans=-1;
+	for(auto i=0;i&lt;ts.size()-1;i++){
+		ans=max(ans,(double)abs(ts[i].second-ts[i+1].second)/(double)abs(ts[i].first-ts[i+1].first));
+		
+	}
+	printf("%.1f",ans);
+	return 0;
+}
+    </code></pre>
+    </main>
+    <script>
+        const guide_btn = document.getElementById('guide-btn');
+        const code_btn=document.getElementById('code-btn');
+        let guide_count = 1;
+        let code_count = 1;
+        guide_btn.addEventListener('click', function() {
+            if(guide_count===1){
+                guide_btn.textContent="Hide Guide";
+                guide_count=0;
+                document.getElementById("strategy").style.display="block";
+            }else{
+                guide_btn.textContent="Show Guide";
+                guide_count=1;
+                document.getElementById("strategy").style.display="none";
+            }
+        });
+        code_btn.addEventListener('click', function() {
+            if(code_count===1){
+                code_btn.textContent="Hide Code";
+                code_count=0;
+                document.getElementById("code").style.display="block";
+            }else{
+                code_btn.textContent="Show Code";
+                code_count=1;
+                document.getElementById("code").style.display="none";
+            }
+        });
+    </script>
+
+</body>
+</html>
