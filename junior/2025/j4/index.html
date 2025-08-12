@@ -23,7 +23,31 @@
         <p> </p>
         <button id="guide-btn" >Show Guide</button>
         <pre id="strategy" style="display: none;">
-...
+The key to helping Jeremy determine the maximum possible number of consecutive days with sunshine is to 
+develop an algorithm. Of course, you then need to implement the algorithm, but to maintain focus, it can be
+very helpful to separate these two tasks.
+To solve the first subtask, it is useful to count the number of S characters. It is then tempting to say 
+that the correct answer is one more than this total. This is correct except for one special case. If there
+are no P characters, then the answer is N-1 corresponding to when the data is incorrect for the first day 
+or last day.
+
+The simplest algorithm to solve the general problem is probably to read and store the entire input, and 
+consider the N possible cases for the one day that the data is incorrect. For each of these cases, you can
+first "flip" the corresponding S to P or vice versa and then scan the result for the longest sequence of S
+characters. This approach can earn full marks for the first two subtasks but will be too slow for the last
+subtask when N can be as large as 500000. In general, if an outer loop iterates this many times and for each
+iteration an inner loop also processes this much data, the algorithm will probably be too slow. Sometimes
+the inner loop can be hidden inside a built-in function. For example, search functions and string 
+concatenation are notorious for slowing code down in this way.
+
+We can avoid this slowdown and solve the last subtask by processing the data only once. Ignoring the special
+case of only S characters, the maximum possible number of consecutive days with sunshine will be the length
+of the longest string that consists of either (i) only S characters preceded or followed by exactly one P 
+character, or (ii) only S characters followed by exactly one P character followed by another string of only
+S characters. To find the longest such string, there are parallels to J3 in that you more or less need to 
+tokenize the input into blocks of S characters and blocks of P characters. If you wish, you can store the
+lengths of these blocks instead of the blocks themselves. Regardless, since we only need to consider up to
+three blocks in a row, all this can be done in one loop without too many steps per iteration.
         </pre>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">

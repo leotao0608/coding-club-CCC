@@ -23,7 +23,32 @@
         <p> </p>
         <button id="guide-btn" >Show Guide</button>
         <pre id="strategy" style="display: none;">
-...
+For this question, we will talk about finding an optimal path for Ava that starts at the upper territory
+and ends at the lower territory but it doesn't really matter which direction you consider.
+The first subtask gives us a clue on how to proceed. There are only two ways to reach the first or last 
+tile in the second row, while there are three ways to reach each tile in between. Therefore we can quickly
+calculate the minimum cost to get to each of the tiles in the second row. Our final answer will be the 
+minimum of these C minimum costs.
+That is where the clue lies, because once we determine the minimum cost to get to each tile in the second
+row, we can ignore the first row, and consider the second and third rows as a repeat of the first subtask.
+
+The general idea here is that we are solving the problem of determining the minimum cost to get to each
+tile in a row by first solving the "subproblem" of determining the minimum cost to get to each tile in the 
+previous row. These subproblems can be solved by using recursion. That is, most of the work can be done by 
+a function called solve that calls itself containing a line similar to:
+    return G[r][c] + min(solve(G,r-1,c-1),solve(G,r-1,c),solve(G,r-1,c+1))
+where G[r][c] is the minimum cost to get to the tile in row r and column c. This approach will earn 11 marks
+by solving the second subtask. It will be too slow to tackle grids with 100 rows and 100 columns because it
+will often solve the same subproblem many times. (Can you see why?) One way to overcome this hurdle is to use
+a technique called memoization which involves storing solutions to subproblems so they don't need to be be 
+recalculated. Alternatively, you can use nested loops instead of recursion to walk through the grid from the
+upper row to the lower row storing the "answer" at each tile you encounter. This works because you willalways
+know the answer to each subproblem you need, when you need it.
+These approaches are examples of what is called dynamic programming. They were described in a way that 
+suggests the full grid be stored in memory and be used to solve solutions to subproblems. That will work for
+the third subtask but will use up too much memory when the grid grows to 20000 rows and 20000 columns. This
+can be avoided, and full marks earned, by realizing you only need to store "answers" for the previous and 
+current rows.
         </pre>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">

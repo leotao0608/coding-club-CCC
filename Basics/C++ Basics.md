@@ -27,12 +27,12 @@ Table of contents:
     + [`while` Loop](#while-loop)
     + [`do while` Loop](#do-while-loop)
     + [`for` Loop](#for-loop)
-    + [Ranged based `for` Loop](#ranged-based-for-loop)
+    + [Ranged-based `for` Loop](#ranged-based-for-loop)
     + [`break` and `continue`](#break-and-continue)
 <br><br>
 # C++ syntax
 Start by the following code to understand the language better.
-```C++
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -42,8 +42,8 @@ int main() {
 ```
 1. `#include <iostream>` is a header file **library** that lets us work with input and output objects.  
 2. `using namespace std` means that we can use names for objects and variables from the standard library.   
-    >Don't worry if you don't understand how `#include <iostream>` and `using namespace std` works. Just think of it as something that (almost) always appears in your program.  
-3. Another thing that always appear in a C++ program is `int main()`. This is called a function, and `int` is its type. Any code inside its curly brackets `{}` will be executed.  
+    >Don't worry if you don't understand how `#include <iostream>` and `using namespace std` work. Just think of it as something that (almost) always appears in your program.  
+3. Another thing that always appears in a C++ program is `int main()`. This is called a function, and `int` is its type. Any code inside its curly brackets `{}` will be executed.  
 4. `cout` (pronounced "**see-out**") is an object used together with the insertion operator (`<<`) to **output/print** text. In this example, it will output "Hello World!".  
 5. `return 0` ends the function.  
 
@@ -51,11 +51,11 @@ int main() {
 
 **Note**:
 - C++ is **case-sensitive**: "cout" and "Cout" has different meaning.   
-- The compiler ignores white spaces. However, multiple lines makes the code more readable.
-    + White spaces include: tab(4 spaces usually), enter(a new line) and space.
+- The compiler ignores whitespaces. However, multiple lines makes the code more readable.
+    + Whitespaces include: tab(4 spaces usually), enter(a new line) and space.
 
 ### Use of Semicolons(;)
-In C++, a semicolon marks the end of a complete statement (often called a statement terminator).  
+In C++, a semicolon marks the end of a complete statement (often called a **statement terminator**).  
 It tells the compiler:
 >“This instruction is done — now move on to the next one.”  
 
@@ -92,7 +92,7 @@ The following statement "instructs" the compiler to print the text "Hello World"
 Most C++ programs contain many statements.  
 The statements are executed, one by one, in the same order as they are written:  
 Example:  
-```C++
+```cpp
 cout << "Hello World!";
 cout << "I'm learning C++!";
 return 0;
@@ -115,42 +115,42 @@ And at last, the third statement is executed (end the C++ program successfully).
 + cout = output stream (from program → screen)
 
 Both are part of the `<iostream>` library.
-```C++
+```cpp
 #include<iostream>
 ```
 ## Output with `cout`
-```C++
+```cpp
 cout << data;
 ```
 + `<<` is called the **insertion** operator (inserts data into the output stream).
 + "data" can be anything, from a string of charactors to a number.  
 You can chain outputs:
-```C++
+```cpp
 cout << a << b << c << d;
 ```
 You can also output a newline:
-```C++
+```cpp
 cout << endl; //endl makes a newline, or
 cout << "\n"; //which also makes a newline.
 ```
 
 ## Input with `cin`
-```C++
+```cpp
 cin >> variable;
 ```
 + `>>` is the **extraction** operator (extracts data from the input stream into a variable).
 Example:
-```C++
+```cpp
 int age;    //This line of code defines a new variable called age of int type. We will discuss this later.
 cin >> age;
 ```
 
 <br><br>
 # C++ comments
-Single line comments start with `//`.  
+Single-line comments start with `//`.  
 Multi-line comments start with `/*` and end with `*/`.  
 Example: 
-```C++
+```cpp
 // This is a single line comment
 
 /*
@@ -173,14 +173,14 @@ In C++, there are five main types of variables (defined with different keywords)
 
 ## Declaring Variables
 To create a variable, specify the type and name (and assign it a value):
-```C++
+```cpp
 type variableName;
 type variableName = value;
 //type is one of the C++ types, such as int. variableName is the name of the variable, such as a or x.
 //The equal sign assigns the value to the variable.
 ```
 You can also declare two or more variables of the same type at the same time.
-```C++
+```cpp
 char var1, var2, var3.//variables are seperated bt commas.
 ```
 
@@ -191,7 +191,7 @@ char var1, var2, var3.//variables are seperated bt commas.
 4. Spaces, punctuation, or special symbols like `@`, `#`, `!` are **not** **allowed**. Underscore `_` **is allowed** to separate words.
 5. You cannot use keywords for variable names, such as `int`, `for`, `return`...
 Examples:
-```C++
+```cpp
 int _score;            
 int age;
 double count1;
@@ -204,7 +204,7 @@ double count1;
 ## Assigning Values
 After declaring a variable, values can be assigned to it.  
 For example:
-```C++
+```cpp
 int a = 10; //Declaring an int variable called a and assigned a value of 10 to it.
 cout << a;  //Output: 10
 a = 5;      //assign 5 to a
@@ -213,7 +213,7 @@ cout << a;  //Output: 5
 ## Constant Variables
 When you do not want the value of a variable to be changed, you can use the keyword `const` infront of the type of variable when declaring it.
 For example:
-```C++
+```cpp
 const int a = 10; //a will always be 10.
 a = 5;            //error: assignment of read-only variable 'a'
 ```
@@ -221,9 +221,9 @@ a = 5;            //error: assignment of read-only variable 'a'
 ## `auto` keyword
 The `auto` keyword automatically detects the type of a variable based on the value you assign to it.
 For example, 
-```C++
+```cpp
 int a = 10; //Instead of writing int, you can write auto
-auto a = 10; //which works the same
+auto b = 10; //which works the same
 ```
 
 <br><br>
@@ -244,7 +244,7 @@ Some common operators include:
 | `--`     | Decrement    | Decreases the value of a variable by 1        |
 
 Examples:
-```C++
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -253,7 +253,7 @@ int main() {
   int c = a + b;
   cout << c << endl;		//15
   c = a - b;
-  cout<<c<<endl;            //-5
+  cout << c << endl;            //-5
   c = a * b;
   cout << c << endl;		//50
   c = b / a;
@@ -276,7 +276,7 @@ Order of operations:
 - Increase i by 1.
 - Use the new value of i.  
 For example:
-```C++
+```cpp
 int x = 5;
 y = ++x;    //x first increase by 1, then is assigned to y
 cout << y;  //Output: 6
@@ -286,7 +286,7 @@ Order of operations:
 - Use the current value of i.
 - Increase i by 1 afterward.
 For example:
-```C++
+```cpp
 int x = 5;
 y = x++;    //the value of x is assigned to y first, then increase by 1
 cout << y;  //Output: 5
@@ -304,7 +304,7 @@ Here are some common assignment operators:
 | `/=`     | `x /= 3` | `x = x / 3`  |
 | `%=`     | `x %= 3` | `x = x % 3`  |
 Examples:
-```C++
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -337,7 +337,7 @@ The **return value** of a comparison is either `1` or `0`, which means `true` (1
 | `<=`     | Less than or equal to         | `x <= y`    |
 
 Example:  
-```C++
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -363,7 +363,7 @@ Here are three logical operators:
 | `||`     | Logical or  | Returns true if one of the statements is true        | `x < 5 || x < 4`            |
 | `!`      | Logical not | Reverse the result, returns false if result is true  | `!(x < 5 && x < 10)`        |
 Example:  
-```C++
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -382,23 +382,23 @@ int main() {
 }
 ```
 
-# C++ Conditional statements
+# C++ Conditional Statements
 A **conditional statement** is a programming construct that lets a program make decisions by executing different code blocks depending on whether a given condition is true or false.
 ## `if` statement
 Use the `if` statement to specify a block of C++ code to be executed if a condition is true.
-```C++
+```cpp
 if(condition){
     // block of code to be executed if the condition is true
 }
 ```
 Example 1:
-```C++
+```cpp
 if (20 > 18) {
   cout << "20 is greater than 18";
 }
 ```
 Example 2:
-```C++
+```cpp
 int x = 20;
 int y = 18;
 if (x > y) {
@@ -408,7 +408,7 @@ if (x > y) {
 
 ## `else` statement
 Use the `else` statement to specify a block of code to be executed if the condition is false.
-```C++
+```cpp
 if (condition) {
   // block of code to be executed if the condition is true
 } else {
@@ -417,7 +417,7 @@ if (condition) {
 ```
 Note that else cannot appear alone and must be behind an if statement.
 Example:
-```C++
+```cpp
 int time = 20;
 if (time < 18) {
   cout << "Good day.";
@@ -429,7 +429,7 @@ if (time < 18) {
 
 ## `else if` statement
 Use the `else if` statement to specify a new condition if the first condition is false.
-```C++
+```cpp
 if (condition1) {
   // block of code to be executed if condition1 is true
 } else if (condition2) {
@@ -440,7 +440,7 @@ if (condition1) {
 ```
 There can be multiple `else if` statements but only one pair of `if` and `else` statements.
 Example:
-```C++
+```cpp
 int time = 22;
 if (time < 10) {
   cout << "Good morning.";
@@ -457,7 +457,7 @@ There is also a short-hand if else, which is known as the ternary operator becau
 It can be used to replace multiple lines of code with a single line, and is often used to replace simple `if` `else` statements:  
 `variable = (condition) ? expressionTrue : expressionFalse;`  
 Instead of writing:
-```C++
+```cpp
 int time = 20;
 if (time < 18) {
   cout << "Good day.";
@@ -466,7 +466,7 @@ if (time < 18) {
 }
 ```
 You can simply write:
-```C++
+```cpp
 int time = 20;
 string result = (time < 18) ? "Good day." : "Good evening.";
 cout << result;
@@ -478,13 +478,13 @@ Loops can execute a block of code as long as a specified condition is reached.
 Loops are handy because they save time, reduce errors, and they make code more readable.  
 ## `while` Loop
 The `while` loop loops through a block of code as long as a specified condition is `true`:
-```C++
+```cpp
 while (condition) {
   // code block to be executed if condition is true
 }
 ```
 In the example below, the code in the loop will run, over and over again, as long as a variable (`i`) is less than 5:
-```C++
+```cpp
 int i = 0;
 while (i < 5) {
   cout << i << "\n";
@@ -496,7 +496,7 @@ Note: Do not forget to increase the variable used in the condition (`i++`), othe
 
 ## `do while` Loop
 The `do while` loop is a variant of the `while` loop. This loop will execute the code block once, before checking if the condition is true. Then it will repeat the loop as long as the condition is true.
-```C++
+```cpp
 do {
   // code block to be executed
 }
@@ -505,7 +505,7 @@ while (condition);
 Note: The semicolon `;` after the while condition is **required**!
 
 Example:
-```C++
+```cpp
 int i = 0;
 do {
   cout << i << "\n";
@@ -520,7 +520,7 @@ We usually use `while` or `do while` loops when we are given a condition and don
 
 ## `for` Loop
 When you know exactly how many times you want to loop through a block of code, use the for `loop` instead of a `while` loop.
-```C++
+```cpp
 for (statement 1; statement 2; statement 3) {
   // code block to be executed
 }
@@ -529,7 +529,7 @@ for (statement 1; statement 2; statement 3) {
 - Statement 2 defines the condition for executing the code block.
 - Statement 3 is executed (every time) after the code block has been executed.
 Example 1:
-```C++
+```cpp
 for (int i = 0; i <  n; i++) {
   cout << i << "\n";
 }
@@ -539,14 +539,14 @@ for (int i = 0; i <  n; i++) {
 - Statement 3 increases a value each time the code block in the loop has been executed: `i++`  
 
 Example 2: 
-```C++
+```cpp
 for (int i = 0; i <= 10; i = i + 2) {
   cout << i << "\n";          // All even numbers between 0~10 are printed.
 }
 ```
 
 Example 3:
-```C++
+```cpp
 int sum = 0;
 for (int i = 1; i <= 5; i++) {
   sum = sum + i;
@@ -555,19 +555,19 @@ cout << "Sum is " << sum; //This example calculates the sum of numbers from 1 to
 ```
 
 Example 4:
-```C++
+```cpp
 for (int i = 5; i > 0; i--) {
   cout << i << "\n";    //This example prints a countdown from 5 to 1:
 }
 ```
-## Ranged based `for` Loop
-```C++
+## Ranged-based `for` Loop
+```cpp
 for (type variableName : arrayName) {
   // code block to be executed
 }
 ```
 Example:
-```C++
+```cpp
 int myNumbers[5] = {10, 20, 30, 40, 50};
 for (int i : myNumbers) {
   cout << i << " ";
@@ -577,7 +577,7 @@ for (int i : myNumbers) {
 ## `break` and `continue`
 The `break` statement can also be used to jump out of a loop.
 Example:
-```C++
+```cpp
 for (int i = 0; i < 10; i++) {
   if (i == 4) {
     break;          //In this example, the loop breaks at i == 4 and exits the loop(the loops ends)
@@ -587,7 +587,7 @@ for (int i = 0; i < 10; i++) {
 //Output: 0 1 2 3
 ```
 The `continue` statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
-```C++
+```cpp
 for (int i = 1; i <= 10; i++) {
   if (i == 4) {
     continue;         //This example skips the value of 4:
