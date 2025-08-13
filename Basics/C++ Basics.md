@@ -30,7 +30,7 @@ Table of contents:
     + [Ranged-based `for` Loop](#ranged-based-for-loop)
     + [`break` and `continue`](#break-and-continue)
 <br><br>
-# C++ syntax
+# 1. C++ syntax
 Start by the following code to understand the language better.
 ```cpp
 #include <iostream>
@@ -80,7 +80,7 @@ int main() {
 (More Syntax rules will be explained afterwards.)
 
 <br><br>
-# C++ Statements
+# 2. C++ Statements
 
 A computer program is a list of "instructions" to be "executed" by a computer.
 
@@ -108,7 +108,7 @@ Then the second statement is executed (print "I'm learning C++!" to the screen).
 And at last, the third statement is executed (end the C++ program successfully).  
 
 <br><br>
-# C++ Inputs and Outputs
+# 3. C++ Inputs and Outputs
 **I/O** in C++ Uses Streams
 + Stream = a flow of data.
 + cin = input stream (from keyboard → program)
@@ -146,7 +146,7 @@ cin >> age;
 ```
 
 <br><br>
-# C++ comments
+# 4. C++ comments
 Single-line comments start with `//`.  
 Multi-line comments start with `/*` and end with `*/`.  
 Example: 
@@ -161,7 +161,7 @@ Example:
 ```
 
 <br><br>
-# C++ Variables
+# 5. C++ Variables
 Variables are containers for storing data values.
 
 In C++, there are five main types of variables (defined with different keywords):  
@@ -227,7 +227,7 @@ auto b = 10; //which works the same
 ```
 
 <br><br>
-# C++ Operators
+# 6. C++ Operators
 Operators are used to perform operations on variables and values.
 
 ## Arithmetic Operators
@@ -382,7 +382,7 @@ int main() {
 }
 ```
 
-# C++ Conditional Statements
+# 7. C++ Conditional Statements
 A **conditional statement** is a programming construct that lets a program make decisions by executing different code blocks depending on whether a given condition is true or false.
 ## `if` statement
 Use the `if` statement to specify a block of C++ code to be executed if a condition is true.
@@ -473,7 +473,7 @@ cout << result;
 ```
 
 <br><br>
-# C++ Loops
+# 8. C++ Loops
 Loops can execute a block of code as long as a specified condition is reached.  
 Loops are handy because they save time, reduce errors, and they make code more readable.  
 ## `while` Loop
