@@ -22,6 +22,7 @@ hidden in the problem and it may be difficult to detect it.
             * [Introduction to queue](#introduction-to-queue)
 4. [Practice Questions](#4-practice-questions)
 
+<a id="1-graph-terminology"></a>
 
 # 1. Graph Terminology
 A **graph** consists of **nodes** and **edges**.  
@@ -36,6 +37,7 @@ path 1 → 3 → 4 → 5 of length 3 from node 1 to node 5:
 
 A path is a **cycle** if the first and last node is the same. For example, the above
 graph contains a cycle 1 → 3 → 4 → 1.
+<a id="connectivity"></a>
 
 ## Connectivity
 A graph is **connected** if there is a path between any two nodes. For example,
@@ -54,6 +56,7 @@ A tree is a connected graph that consists of n nodes and n−1 edges. There is
 a unique path between any two nodes of a tree. For example, the following graph
 is a tree:  
 <img src="./Photos/graph/6.jpg" alt="" width="220">
+<a id="edge-directions"></a>
 
 ## Edge directions
 A graph is **directed** if the edges can be traversed in one direction only. For
@@ -62,6 +65,7 @@ example, the following graph is directed:
 
 The above graph contains a path 3 → 1 → 2 → 5 from node 3 to node 5, but
 there is no path from node 5 to node 3.  
+<a id="edge-weights"></a>
 
 ## Edge weights
 In a **weighted** graph, each edge is assigned a **weight**. The weights are often
@@ -72,17 +76,20 @@ The length of a path in a weighted graph is the sum of the edge weights on
 the path. For example, in the above graph, the length of the path 1 → 2 → 5 is 12,
 and the length of the path 1 → 3 → 4 → 5 is 11. The latter path is the shortest
 path from node 1 to node 5.
+<a id="neighbors-and-degrees"></a>
 
 ## Neighbors and degrees
 Two nodes are **neighbors** or **adjacent** if there is an edge between them. The
 **degree** of a node is the number of its neighbors. For example, in the following
 graph, the neighbors of node 2 are 1, 4 and 5, so its degree is 3.  
 <img src="./Photos/graph/9.jpg" alt="" width="220">
+<a id="2-graph-representation"></a>
 
 # 2. Graph Representation
 There are several ways to represent graphs in algorithms. The choice of a data
 structure depends on the size of the graph and the way the algorithm processes
 it.  
+<a id="adjacency-list-representation"></a>
 
 ## Adjacency list representation
 In the adjacency list representation, each node x in the graph is assigned an
@@ -136,9 +143,11 @@ for (int u = 0; u<adj[s].size(); u++) {
     // process node u
 }
 ```
+<a id="3-graph-traversal"></a>
 
 # 3. Graph traversal
 Two fundamental graph algorithms are discussed: [Depth First Search](#depth-first-search)(DFS) and [Breadth-First Search](#breadth-first-search)(BFS).
+<a id="depth-first-search"></a>
 
 ## Depth-First Search
 Depth-first search (DFS) is a straightforward graph traversal technique. The
@@ -148,6 +157,7 @@ Depth-first search always follows a single path in the graph as long as it
 finds new nodes. After this, it returns to previous nodes and begins to explore
 other parts of the graph. The algorithm keeps track of visited nodes, so that it
 processes each node only once.
+<a id="example"></a>
 
 ### Example
 Consider how depth-first search processes the following graph:  
@@ -170,6 +180,7 @@ of nodes and *m* is the number of edges, because the algorithm processes each
 node and edge once.
 
 Here is a [video](https://drive.google.com/file/d/1P78X9kl2Y1XWRtRGNUd2U3oxn-blotHP/view?usp=sharing) demonstration. 
+<a id="implementation"></a>
 
 ### Implementation
 When implementing DFS, we often use a recursive function to visit the vertices and an array to store whether we've seen a vertex before.
@@ -210,6 +221,7 @@ int main() {
 	}
 }
 ```
+<a id="breadth-first-search"></a>
 
 ## Breadth-First Search
 Breadth-first search (BFS) visits the nodes in increasing order of their distance
@@ -221,6 +233,7 @@ Breadth-first search goes through the nodes one level after another. First the
 search explores the nodes whose distance from the starting node is 1, then the
 nodes whose distance is 2, and so on. This process continues until all nodes have
 been visited.  
+<a id="example-1"></a>
 
 ### Example
 Let us consider how breadth-first search processes the following graph:  
@@ -244,9 +257,11 @@ Like in depth-first search, the time complexity of breadth-first search is
 *O(n + m)*, where *n* is the number of nodes and *m* is the number of edges.  
 
 Here is a [video](https://drive.google.com/file/d/1O6nI_tjpCIzlq5d8uZCnNaztx6jlGCBl/view?usp=sharing) demonstration.  
+<a id="implementation-1"></a>
 
 ### Implementation
 Breadth-first search is more difficult to implement than depth-first search, because the algorithm visits nodes in different parts of the graph. A typical implementation is based on a queue that contains nodes. At each step, the next node in the queue will be processed.  
+<a id="introduction-to-queue"></a>
 
 #### Introduction to Queue
 A `queue` is a First In First Out (FIFO) data structure that supports three
@@ -312,6 +327,7 @@ int main() {
     }
 }
 ```
+<a id="4-practice-questions"></a>
 
 # 4. Practice Questions
 1. [Closing the Farm](http://www.usaco.org/index.php?page=viewproblem2&cpid=644)
