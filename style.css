@@ -1,39 +1,158 @@
-/*main*/
-body{
-    background-color: #f9e4b7;
+/* 全局样式变量 */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --background-color: #f9f9f9;
+    --text-color: #333333;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
 }
-section{
-    margin-left: 250px;
-    margin-top: 100px;
+
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*navbar*/
-.navbar{
-    margin-left: 250px;
-    font-size: 20px;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
-#senior{
-    margin-left: 50px;
+
+/* 导航栏样式 */
+.nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-/*CEMC Past Contests*/
-#cemc{
-    margin-left: 250px;
-    font-size: 20px;
-}
-#introduction{
-    font-size: 20px;
-}
-h1{
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     text-align: center;
-    font-size: 40px;
 }
-h2{
-    font-size: 30px;
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-.tutorial{
-    margin-left: 250px;
-    font-size: 20px;
+
+/* 主要内容区域 */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 2rem;
 }
-p{
-    margin-left: 250px;
-    font-size: 30px;
+
+/* 介绍部分 */
+.intro {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+/* 内容网格布局 */
+.content-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* 内容部分共同样式 */
+.content-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.content-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.content-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    border: 1px solid #eee;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.content-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.content-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Past Contests 特殊样式 */
+.contests .content-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin-top: 80px;
+    }
+
+    .content-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro, .content-section {
+    animation: fadeIn 0.5s ease-out;
 }

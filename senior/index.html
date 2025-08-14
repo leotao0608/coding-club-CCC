@@ -4,35 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Senior Practice Questions</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Senior Practice Questions</h1>
-    </header>
-    <main>
-        <nav class="navbar">
-            <a href="../index.html">Home</a>
-        </nav>
-        <select id="year-select" style="margin-left: 250px; margin-top: 30px;">
-            <option value="">Select Year</option>
-            <option value="2025/">2025</option>
-            <option value="2024/">2024</option>
-            <option value="2023/">2023</option>
-            <option value="2022/">2022</option>
-            <option value="2021/">2021</option>
-            <option value="2020/">2020</option>
-        </select>
-        <div id="problems" style="display:none; margin-top: 10px; margin-left: 250px;">
-            <button data-problem="1">Problem 1</button>
-            <button data-problem="2">Problem 2</button>
-            <button data-problem="3">Problem 3</button>
-            <button data-problem="4">Problem 4</button>
-            <button data-problem="5">Problem 5</button>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-logo">
+                CCC Senior
+            </h1>
         </div>
-        <p><b>Algorithms in Senior CCC</b></p>
-        <pre>
+    </nav>
+    <main class="container">
+        <section class="content-section">
+            <button onclick="window.location.href='../'" id="home-btn" class="nav-button">Home</button>
+            <div class="selection-area">
+                <select id="year-select" class="year-select">
+                    <option value="">Select Year</option>
+                    <option value="2025/">2025</option>
+                    <option value="2024/">2024</option>
+                    <option value="2023/">2023</option>
+                    <option value="2022/">2022</option>
+                    <option value="2021/">2021</option>
+                    <option value="2020/">2020</option>
+                </select>
+                <div id="problems" class="problem-buttons">
+                    <button data-problem="1">Problem 1</button>
+                    <button data-problem="2">Problem 2</button>
+                    <button data-problem="3">Problem 3</button>
+                    <button data-problem="4">Problem 4</button>
+                    <button data-problem="5">Problem 5</button>
+                </div>
+            </div>
+
+            <div class="content-info">
+                <h2>Algorithms Covered in Senior CCC</h2>
+                <pre class="info-text">
 (Basic)
     1. Sorting                  (Basic)(Very common)
     2. Complete Search          (Basic)(Very common)
@@ -56,8 +64,8 @@
     11. Minimum Spanning Tree   (Advanced)(Less common)
         • Kruskal's Algorithm
         • Prim's Algorithm
-    </pre>
-
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

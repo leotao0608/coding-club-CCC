@@ -5,9 +5,7 @@ const problemsDiv = document.getElementById('problems');
 yearSelect.addEventListener('change', function() {
   if (this.value) {
     problemsDiv.style.display = 'block';
-  } else {
-    problemsDiv.style.display = 'none';
-  }
+  } 
 });
 
 problemsDiv.addEventListener('click', function(e) {

@@ -3,25 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Junior Problem 1</title>
-    <link rel="stylesheet" href="../../problems.css">
+    <title>CCC '20 J1 - Dog Treats</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Junior Problem 1</h1>
-    </header>
-    <main>
-        <nav class="navbar">
-            <a href="../../index.html" class="back">Back</a>
-        </nav>
-        
-        <h3>CCC '20 J1 - Dog Treats</h3>
-        <a href="https://dmoj.ca/problem/ccc20j1" target="_blank" rel="noopener noreferrer" class="dmoj">
-            View or submit this problem on DOMJ
-        </a>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-logo">
+                CCC '20 J1 - Dog Treats
+            </h1>
+        </div>
+    </nav>
+    <main class="container">
+        <button onclick="window.location.href='../../'" id="home-btn" class="nav-button">Back</button>
         <p> </p>
-        <button id="guide-btn" >Show Guide</button>
+        <a href="https://dmoj.ca/problem/ccc20j1" target="_blank" rel="noopener noreferrer" class="nav-button" style="text-decoration: none">
+            View or submit this problem on DMOJ
+        </a>
+        
+        <button id="guide-btn" class="nav-button" style="margin-top: 20px; display: block;">Show Guide</button>
         <pre id="strategy" style="display: none;">
 Coming soon...
         </pre>
@@ -29,7 +31,7 @@ Coming soon...
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script>
-        <button id="code-btn" >Show Code</button>
+        <button id="code-btn" class="nav-button">Show Code</button>
         <pre id="code" style="display:none;background-color: #f9e4b7;"><code class="language-cpp">
 #include &lt;bits/stdc++.h&gt;
 

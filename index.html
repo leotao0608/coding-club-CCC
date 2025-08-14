@@ -1,47 +1,69 @@
-<!--main-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCC Practice Zone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>CCC Practice Zone</h1>
-    </header>
-    <main>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="nav-logo">CCC Practice Zone</h1>
+        </div>
+    </nav>
+
+    <main class="container">
         <section class="intro">
-            <h2>Site Overview</h2>
-            <p id="introduction">
-You can find both CCC Junior and Senior practice questions on this website.  <br>
-There are problem approaches and strategies for every question, as well as answer keys posted.
+            <h2>Welcome to CCC Practice Zone</h2>
+            <p id="introduction" class="intro-text">
+                You can find both CCC Junior and Senior practice questions on this website.<br>
+                There are problem approaches and strategies for every question, as well as answer keys posted.
             </p>
         </section>
-        <p><b>Past Contests</b></p>
-        <nav class="navbar">
-            <a href="junior/" id="junior">Junior</a>
-            <a href="senior/" id="senior">Senior</a>
-        </nav>
-        <!--<a href="https://cemc.uwaterloo.ca/resources/past-contests?grade=All&academic_year=All&contest_category=29" target="_blank" rel="noopener noreferrer" class="external-button" id="cemc">
-            View Past Contests at CEMC
-        </a>
-        -->
-        <p><b>Algorithm Tutorials</b></p>
-        <p style="font-size: 25px;">Basics</p>
-        <a href="Basics/C++ basics.html" target="_blank" rel="noopener noreferrer" class="tutorial">C++ Basics</a>
-        <p style="font-size: 25px;">Advanced</p>
-        <a href="Algorithms/Graph Algorithms.html" target="_blank" rel="noopener noreferrer" class="tutorial">Graph Algorithms</a>
-        <a href="Algorithms/Greedy Algorithms.html" target="_blank" rel="noopener noreferrer" class="tutorial">Greedy Algorithms</a>
-        <a href="Algorithms/Sorting Methods.html" target="_blank" rel="noopener noreferrer" class="tutorial">Sorting Methods</a>
 
+        <div class="content-grid">
+            <!-- Past Contests Section -->
+            <section class="content-section contests">
+                <h2>Past Contests</h2>
+                <div class="content-cards">
+                    <a href="junior/" class="content-card">
+                        <h3>Junior</h3>
+                        <p>Practice questions and solutions for CCC Junior division</p>
+                    </a>
+                    <a href="senior/" class="content-card">
+                        <h3>Senior</h3>
+                        <p>Practice questions and solutions for CCC Senior division</p>
+                    </a>
+                </div>
+            </section>
 
-
-
-
-
+            <!-- Algorithm Tutorials Section -->
+            <section class="content-section tutorials">
+                <h2>Algorithm Tutorials</h2>
+                <div class="content-cards">
+                    <a href="Basics/C++ basics.html" class="content-card">
+                        <h3>C++ Basics</h3>
+                        <p>Learn fundamental C++ programming concepts</p>
+                    </a>
+                    <a href="Algorithms/Graph Algorithms.html" class="content-card">
+                        <h3>Graph Algorithms</h3>
+                        <p>Study graph theory and related algorithms</p>
+                    </a>
+                    <a href="Algorithms/Greedy Algorithms.html" class="content-card">
+                        <h3>Greedy Algorithms</h3>
+                        <p>Explore greedy algorithm strategies</p>
+                    </a>
+                    <a href="Algorithms/Sorting Methods.html" class="content-card">
+                        <h3>Sorting Methods</h3>
+                        <p>Learn different sorting algorithms</p>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

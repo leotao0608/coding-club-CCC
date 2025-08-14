@@ -1,20 +1,113 @@
-/*junior*/
-body{
-    background-color: #f9e4b7;
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    margin-bottom: 20px;
+    
 }
-h1{
-    text-align: center;
-    font-size: 40px;
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.navbar{
-    margin-left: 250px;
-    font-size: 20px;
+
+
+/* 选择区域样式 */
+.selection-area {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
 }
-pre{
-    margin-left: 250px;
-    font-size: 15px;
+
+/* 年份选择下拉框 */
+.year-select {
+    width: 200px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
 }
-p{
-    margin-left: 250px;
-    font-size: 20px;
+
+.year-select:hover, .year-select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* 问题按钮样式 */
+.problem-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.problem-buttons button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.problem-buttons button:hover {
+    transform: translateY(-2px);
+    background-color: #2980b9;
+}
+
+/* 内容信息区域 */
+.content-info {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.content-info h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.info-text {
+    font-family: monospace;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: var(--text-color);
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .selection-area {
+        padding: 1rem;
+    }
+
+    .year-select {
+        width: 100%;
+    }
+
+    .problem-buttons {
+        justify-content: center;
+    }
+
+    .problem-buttons button {
+        width: calc(50% - 0.5rem);
+    }
 }
