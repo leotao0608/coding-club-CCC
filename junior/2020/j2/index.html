@@ -16,6 +16,7 @@
             </h1>
         </div>
     </nav>
+    
     <main class="container">
         <section class="content-section">
             <div>
@@ -53,13 +54,27 @@ Coming soon...
                 </div>
                 <div id="code-container" class="code-container" style="display: none;">
                     <pre id="code"><code class="language-cpp">
-Coming soon...
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+    int p, n, r;
+    cin &gt;&gt; p &gt;&gt; n &gt;&gt; r;
+    int i = 0;
+    while(p &gt;= 0){
+        p -= n;
+        n *= r;
+        i++;
+    }
+    cout &lt;&lt; i-1;
+}
                     </code></pre>
                 </div>
             </section>
         </section>
     </main>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="../../problems.js"></script>
 
 </body>
