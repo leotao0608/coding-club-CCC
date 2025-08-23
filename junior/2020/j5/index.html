@@ -54,7 +54,54 @@ Coming soon...
                 </div>
                 <div id="code-container" class="code-container" style="display: none;">
                     <pre id="code"><code class="language-cpp">
-Coming soon...
+//score 13/15
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main() {
+    int M, N;
+    cin &gt;&gt; M &gt;&gt; N;
+
+    vector&lt;vector&lt;int&gt;&gt; grid(M + 1, vector&lt;int&gt;(N + 1));
+    for (int i = 1; i &lt;= M; i++) {
+        for (int j = 1; j &lt;= N; j++) {
+            cin &gt;&gt; grid[i][j];
+        }
+    }
+
+    queue&lt;pair&lt;int,int&gt;&gt; q;
+    vector&lt;vector&lt;bool&gt;&gt; visited(M + 1, vector&lt;bool&gt;(N + 1, false));
+
+    q.push({1, 1});
+    visited[1][1] = true;
+
+    while (!q.empty()) {
+        auto [r, c] = q.front();
+        q.pop();
+
+        if (r == M && c == N) {
+            cout &lt;&lt; "yes\n";
+            return 0;
+        }
+
+        int v = grid[r][c];
+        for (int a = 1; a * a &lt;= v; a++) {
+            if (v % a == 0) {
+                int b = v / a;
+
+                if (a &lt;= M && b &lt;= N && !visited[a][b]) {
+                    visited[a][b] = true;
+                    q.push({a, b});
+                }
+                if (b &lt;= M && a &lt;= N && !visited[b][a]) {
+                    visited[b][a] = true;
+                    q.push({b, a});
+                }
+            }
+        }
+    }
+    cout &lt;&lt; "no\n";
+    return 0;
+}
                     </code></pre>
                 </div>
             </section>

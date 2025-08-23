@@ -2,9 +2,20 @@
 const yearSelect = document.getElementById('year-select');
 const problemsDiv = document.getElementById('problems');
 
-yearSelect.addEventListener('change', function() {
-  if (this.value) {
+const savedYear = localStorage.getItem('selectedYear');
+if (savedYear) {
+    yearSelect.value = savedYear;
     problemsDiv.style.display = 'block';
+}
+
+yearSelect.addEventListener('change', function() {
+  const year = this.value;
+  if (year) {
+    problemsDiv.style.display = 'block';
+    localStorage.setItem('selectedYear', year);
+  } else {
+    problemsDiv.style.display = 'none';
+    localStorage.removeItem('selectedYear');
   }
 });
 
