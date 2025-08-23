@@ -28,5 +28,4 @@ Tutorials are available in the `Algorithms` and `C++ Basics` folders.
 - [DMOJ Problems](https://dmoj.ca/)
 - [USACO Guide](https://usaco.guide/)
 - [Competitive Programmer’s Handbook (CPH)](https://usaco.guide/CPH.pdf)
-- [Competitive Programmer’s Handbook PDF](https://cses.fi/book/book.pdf)
 - [W3Schools C++ Tutorial](https://www.w3schools.com/cpp/)
