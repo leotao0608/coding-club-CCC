@@ -1,4 +1,3 @@
-/* 全局样式变量 */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
@@ -9,7 +8,7 @@
     --transition-speed: 0.3s;
 }
 
-/* 基础样式重置 */
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ body {
     color: var(--text-color);
 }
 
-/* 导航栏样式 */
 .nav {
     background-color: var(--secondary-color);
     padding: 1rem 0;
@@ -47,14 +45,13 @@ body {
     font-weight: bold;
 }
 
-/* 主要内容区域 */
 .container {
     max-width: 1200px;
     margin: 80px auto 0;
     padding: 2rem;
 }
 
-/* 介绍部分 */
+
 .intro {
     background: #ffffff;
     padding: 2rem;
@@ -71,13 +68,13 @@ body {
     margin-top: 1rem;
 }
 
-/* 内容网格布局 */
+
 .content-grid {
     display: grid;
     gap: 2rem;
 }
 
-/* 内容部分共同样式 */
+
 .content-section {
     background: #ffffff;
     padding: 2rem;
@@ -124,12 +121,10 @@ body {
     font-size: 0.9rem;
 }
 
-/* Past Contests 特殊样式 */
 .contests .content-card {
     background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
 }
 
-/* 响应式设计 */
 @media screen and (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -141,7 +136,6 @@ body {
     }
 }
 
-/* 动画效果 */
 @keyframes fadeIn {
     from {
         opacity: 0;

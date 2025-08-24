@@ -1,4 +1,4 @@
-Table of contents:
+# Table of contents:
 1. [C++ syntax](#c-syntax)
     + [Use of Semi-colons](#use-of-semicolons)
 2. [C++ Statements](#c-statements)
@@ -31,6 +31,7 @@ Table of contents:
     + [`break` and `continue`](#break-and-continue)
 <br><br>
 <a id="c-syntax"></a>
+<br><br><br><br><br>
 # 1. C++ syntax 
 Start by the following code to understand the language better.
 ```cpp
@@ -55,6 +56,7 @@ int main() {
 - The compiler ignores whitespaces. However, multiple lines makes the code more readable.
     + Whitespaces include: tab(4 spaces usually), enter(a new line) and space.
 <a id="use-of-semicolons"></a>
+<br><br><br><br><br>
 ### Use of Semicolons(;)
 In C++, a semicolon marks the end of a complete statement (often called a **statement terminator**).  
 It tells the compiler:
@@ -82,6 +84,7 @@ int main() {
 
 <br><br>
 <a id="c-statements"></a>
+<br><br><br><br><br>
 # 2. C++ Statements
 
 A computer program is a list of "instructions" to be "executed" by a computer.
@@ -122,6 +125,7 @@ Both are part of the `<iostream>` library.
 #include<iostream>
 ```
 <a id="output-with-cout"></a>
+<br><br><br><br><br>
 ## Output with `cout`
 ```cpp
 cout << data;
@@ -138,6 +142,7 @@ cout << endl; //endl makes a newline, or
 cout << "\n"; //which also makes a newline.
 ```
 <a id="input-with-cin"></a>
+<br><br><br><br><br>
 ## Input with `cin`
 ```cpp
 cin >> variable;
@@ -151,6 +156,7 @@ cin >> age;
 
 <br><br>
 <a id="c-comments"></a>
+<br><br><br><br><br>
 # 4. C++ comments
 Single-line comments start with `//`.  
 Multi-line comments start with `/*` and end with `*/`.  
@@ -167,6 +173,7 @@ Example:
 
 <br><br>
 <a id="c-variables"></a>
+<br><br><br><br><br>
 # 5. C++ Variables
 Variables are containers for storing data values.
 
@@ -177,6 +184,7 @@ In C++, there are five main types of variables (defined with different keywords)
 4. `string`: stores a list of charactors, such as "Hello World", "bewivbwiv", "8h6+f5-!", "aa". String values are surrounded by **double quotes**(`""`).
 5. `bool`: stores values with two states: `true` or `false` (or `1` and `0`)
 <a id="declaring-variables"></a>
+<br><br><br><br><br>
 ## Declaring Variables
 To create a variable, specify the type and name (and assign it a value):
 ```cpp
@@ -190,7 +198,7 @@ You can also declare two or more variables of the same type at the same time.
 char var1, var2, var3.//variables are seperated bt commas.
 ```
 <a id="variable-naming-rules"></a>
-
+<br><br><br><br><br>
 ## Variable Naming Rules
 1. Variable names can only contain letters (A-Z, a-z), digits (0-9), and underscore (_).
 2. The first character **cannot be** a digit.
@@ -208,7 +216,7 @@ double count1;
 - `class`(is a keyword),  
 - `first name`(have spaces between). 
 <a id="assigning-values"></a>
-
+<br><br><br><br><br>
 ## Assigning Values
 After declaring a variable, values can be assigned to it.  
 For example:
@@ -219,7 +227,7 @@ a = 5;      //assign 5 to a
 cout << a;  //Output: 5
 ```
 <a id="constant-variables"></a>
-
+<br><br><br><br><br>
 ## Constant Variables
 When you do not want the value of a variable to be changed, you can use the keyword `const` infront of the type of variable when declaring it.
 For example:
@@ -228,7 +236,7 @@ const int a = 10; //a will always be 10.
 a = 5;            //error: assignment of read-only variable 'a'
 ```
 <a id="auto-keyword"></a>
-
+<br><br><br><br><br>
 ## `auto` keyword
 The `auto` keyword automatically detects the type of a variable based on the value you assign to it.
 For example, 
@@ -239,11 +247,11 @@ auto b = 10; //which works the same
 
 <br><br>
 <a id="c-operators"></a>
-
+<br><br><br><br><br>
 # 6. C++ Operators
 Operators are used to perform operations on variables and values.
 <a id="arithmetic-operators"></a>
-
+<br><br><br><br><br>
 ## Arithmetic Operators
 Arithmetic operators are used to perform common mathematical operations.  
 Some common operators include:
@@ -283,7 +291,7 @@ int main() {
 }
 ```
 <a id="i-and-i"></a>
-
+<br><br><br><br><br>
 ### `i++` and `++i`
 `++` means increment by 1. However, although `i++` and `++i` both increases i by 1, they are different in some cases.
 #### `++i` - Pre-increment
@@ -307,7 +315,7 @@ y = x++;    //the value of x is assigned to y first, then increase by 1
 cout << y;  //Output: 5
 ```
 <a id="assignment-operators"></a>
-
+<br><br><br><br><br>
 ## Assignment Operators
 Assignment operators are used to assign values to variables.  
 Here are some common assignment operators:  
@@ -340,7 +348,7 @@ int main() {
 }
 ```
 <a id="comparison-operators"></a>
-
+<br><br><br><br><br>
 ## Comparison Operators
 Comparison operators are used to compare two values (or variables).  
 The **return value** of a comparison is either `1` or `0`, which means `true` (1) or `false` (0), which are **boolean values**
@@ -371,7 +379,7 @@ int main() {
 
 ```
 <a id="logical-operators"></a>
-
+<br><br><br><br><br>
 ## Logical Operators
 Logical operators are used to determine the logic between variables or values.  
 Here are three logical operators:
@@ -400,11 +408,11 @@ int main() {
 }
 ```
 <a id="c-conditional-statements"></a>
-
+<br><br><br><br><br>
 # 7. C++ Conditional Statements
 A **conditional statement** is a programming construct that lets a program make decisions by executing different code blocks depending on whether a given condition is true or false.
 <a id="if-statement"></a>
-
+<br><br><br><br><br>
 ## `if` statement
 Use the `if` statement to specify a block of C++ code to be executed if a condition is true.
 ```cpp
@@ -427,7 +435,7 @@ if (x > y) {
 }
 ```
 <a id="else-statement"></a>
-
+<br><br><br><br><br>
 ## `else` statement
 Use the `else` statement to specify a block of code to be executed if the condition is false.
 ```cpp
@@ -449,7 +457,7 @@ if (time < 18) {
 // Outputs "Good evening."
 ```
 <a id="else-if-statement"></a>
-
+<br><br><br><br><br>
 ## `else if` statement
 Use the `else if` statement to specify a new condition if the first condition is false.
 ```cpp
@@ -475,7 +483,7 @@ if (time < 10) {
 // Outputs "Good evening."
 ```
 <a id="short-hand-if-else-ternary-operator"></a>
-
+<br><br><br><br><br>
 ## Short hand `if` `else` (Ternary Operator)
 There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.  
 It can be used to replace multiple lines of code with a single line, and is often used to replace simple `if` `else` statements:  
@@ -498,12 +506,12 @@ cout << result;
 
 <br><br>
 <a id="c-loops"></a>
-
+<br><br><br><br><br>
 # 8. C++ Loops
 Loops can execute a block of code as long as a specified condition is reached.  
 Loops are handy because they save time, reduce errors, and they make code more readable. 
 <a id="while-loop"></a>
-
+<br><br><br><br><br>
 ## `while` Loop
 The `while` loop loops through a block of code as long as a specified condition is `true`:
 ```cpp
@@ -522,7 +530,7 @@ while (i < 5) {
 Note: Do not forget to increase the variable used in the condition (`i++`), otherwise the loop will never end!  
 >`i` is commonly used in loops, which stands for 'iterator' and 'index'.
 <a id="do-while-loop"></a>
-
+<br><br><br><br><br>
 ## `do while` Loop
 The `do while` loop is a variant of the `while` loop. This loop will execute the code block once, before checking if the condition is true. Then it will repeat the loop as long as the condition is true.
 ```cpp
@@ -547,7 +555,7 @@ This is different from a regular `while` loop, which would skip the loop entirel
 <br>
 We usually use `while` or `do while` loops when we are given a condition and don't know exactly how many times we want to run the loop for.
 <a id="for-loop"></a>
-
+<br><br><br><br><br>
 ## `for` Loop
 When you know exactly how many times you want to loop through a block of code, use the for `loop` instead of a `while` loop.
 ```cpp
@@ -591,7 +599,7 @@ for (int i = 5; i > 0; i--) {
 }
 ```
 <a id="ranged-based-for-loop"></a>
-
+<br><br><br><br><br>
 ## Ranged-based `for` Loop
 ```cpp
 for (type variableName : arrayName) {
@@ -607,7 +615,7 @@ for (int i : myNumbers) {
 //Output: 10 20 30 40 50
 ```
 <a id="break-and-continue"></a>
-
+<br><br><br><br><br>
 ## `break` and `continue`
 The `break` statement can also be used to jump out of a loop.
 Example:
