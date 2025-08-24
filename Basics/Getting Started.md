@@ -8,14 +8,14 @@ C++ is known for its speed, efficiency, and versatility. It’s used in game dev
 
 You can compile a C++ program online or download an IDE.
 
-- Try an [online compiler](https://www.onlinegdb.com/online_c++_compiler) (no installation needed).
+- Try an <a href="https://www.onlinegdb.com/online_c++_compiler" target="_blank">Online Compiler</a> (no installation needed).
 - Recommended: **Embarcadero Dev-C++**
 
 ---
 
 ## Installation Steps
 
-1. Go to the [official website](https://www.embarcadero.com/free-tools/dev-cpp).  
+1. Go to the <a href="https://www.embarcadero.com/free-tools/dev-cpp" target="_blank">official website</a>
    <img src="../Algorithms/Photos/IDE download/1.jpg" alt="Dev-C++ Website" width="700">
 
 2. Click **Free Download**.
