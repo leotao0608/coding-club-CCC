@@ -17,8 +17,6 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-
-/* 选择区域样式 */
 .selection-area {
     margin-bottom: 2rem;
     padding: 1rem;
@@ -27,7 +25,6 @@
     box-shadow: var(--card-shadow);
 }
 
-/* 年份选择下拉框 */
 .year-select {
     width: 200px;
     padding: 0.8rem;
@@ -45,7 +42,6 @@
     outline: none;
 }
 
-/* 问题按钮样式 */
 .problem-buttons {
     display: flex;
     gap: 1rem;
@@ -68,7 +64,6 @@
     background-color: #2980b9;
 }
 
-/* 内容信息区域 */
 .content-info {
     background: #ffffff;
     padding: 2rem;
@@ -92,7 +87,6 @@
     border: 1px solid #eee;
 }
 
-/* 响应式设计 */
 @media screen and (max-width: 768px) {
     .selection-area {
         padding: 1rem;
