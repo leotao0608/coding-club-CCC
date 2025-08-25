@@ -42,8 +42,9 @@
                 </div>
                 <div id="strategy-container" class="info-container" style="display: none;">
                     <pre class="info-text">
-Coming soon...
-                    </pre>
+The approach is to maintain six variables storing values for the gold, silver and bronze score as well as a count of the 
+number of participants with each of these scores. Taking care to initialize these variables properly, they can then be 
+updated as needed given each new score. This approach can be used to pass all three subtasks.
                 </div>
             </section>
 
@@ -54,8 +55,30 @@ Coming soon...
                 </div>
                 <div id="code-container" class="code-container" style="display: none;">
                     <pre id="code"><code class="language-cpp">
-Coming soon...
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
 
+int main() {
+    int N;
+    cin &gt;&gt; N;
+    vector&lt;int&gt; a(N);
+    for(int i = 0; i &lt; N; i++){
+        cin &gt;&gt; a[i];
+    }
+
+    vector&lt;int&gt; b = a;
+    sort(b.begin(), b.end(), greater&lt;int&gt;());
+    b.erase(unique(b.begin(), b.end()), b.end());
+
+    int bronzeScore = b[2];
+    int count = 0;
+    for(int i = 0; i &lt; N; i++){
+        if(a[i] == bronzeScore) count++;
+    }
+
+    cout &lt;&lt; bronzeScore &lt;&lt; " " &lt;&lt; count;
+    return 0;
+}
                     </code></pre>
                 </div>
             </section>

@@ -42,7 +42,11 @@
                 </div>
                 <div id="strategy-container" class="info-container" style="display: none;">
                     <pre class="info-text">
-Coming soon...
+This year, a twist was introduced at this early point of the contest. We are told Dusa’s starting size and the size of 
+the Yobis, but we are not told how many Yobis there are. This means that a while loop, or the equivalent, is needed 
+instead of a for loop which might be more familiar. That is, we can continue reading input and adding the size of the 
+current Yobi to the size of the Dusa while the size of the Dusa is less than the size of the current Yobi. Put another 
+way, the loop continues until a Yobi is encountered that is the same size as the Dusa or larger.
                     </pre>
                 </div>
             </section>
@@ -54,8 +58,20 @@ Coming soon...
                 </div>
                 <div id="code-container" class="code-container" style="display: none;">
                     <pre id="code"><code class="language-cpp">
-Coming soon...
-
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main() {
+    int a;
+    cin &gt;&gt; a;
+    int b;
+    cin &gt;&gt; b;
+    while(a &gt; b){
+        a += b;
+        cin&gt;&gt;b;
+    }
+    cout &lt;&lt; a;
+    return 0;
+}
                     </code></pre>
                 </div>
             </section>
