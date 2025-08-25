@@ -42,7 +42,50 @@
                 </div>
                 <div id="strategy-container" class="info-container" style="display: none;">
                     <pre class="info-text">
-Coming soon...
+Subtask 1
+For this subtask, we will reconstruct the repeated pattern using the cipher. To do so, we will alternate between taking 
+a character input and an integer input. To obtain the pattern, we will maintain a string and append each character a 
+specified number of times to the end of the string. Finding the c-th character formed by repeating this pattern infinitely
+can then be done using a loop. We can maintain an integer representing the position of the c-th character in the pattern
+and increment this value by one at each step of the loop. During the loop, if we ever reach the end of the pattern string, 
+we will reset this integer to point back to the beginning of the pattern.
+
+Subtask 2
+This subtask can be solved similarly to the previous one. However, the count of how many times each character is repeated 
+may no longer be between 1 and 9, so we cannot store this number in a single character. We can use the built-in input functions 
+of programming languages to handle this (for example, we can use std::cin in C++ to alternate between reading a character 
+and a 32-bit integer).
+
+Moreover, since the length of the repeated pattern is larger, some care may be required to ensure its construction is 
+efficient. One such method is appending the characters one by one to the end of a string, as described in Subtask 1. We 
+can find the c-th character of the long cipher formed by repeating this pattern exactly as in Subtask 1.
+
+Subtask 3
+For the third subtask, the value of c can be very large. Thus, using a loop that steps through the pattern c times will 
+no longer be efficient enough. Instead, we will make use of the property that we always loop back to the beginning of 
+the pattern in a predictable way. If we denote the length of the pattern as |S|, then we will reset the integer keeping 
+track of our current position in the pattern every |S| steps. Thus, we can take the "remainder" of steps after dividing 
+c by |S|. This can be done using the modulo operator. Then, the remaining number of steps needed will be less than |S|, 
+the length of the string, which is at most 10^6 characters in this subtask. We can now use a loop to find this character 
+(or access the desired character with direct indexing). Note that c may not fit within a 32-bit integer, and so we should 
+store it in a 64-bit integer.
+
+Subtask 4
+For the final subtask, the length of the pattern can be very large. As such, we can no longer explicitly store it as a 
+string. Instead, we will store it in a compressed format as a sequential list of pairs (x, y), where x is the character 
+and y is the number of times that character is repeated. We can also compute |S|, the length of the pattern, by summing 
+all y that are processed. Note that c and the values of y may not fit within a 32-bit integer, so we should work with 
+64-bit integers instead.
+
+Once we have constructed the list representing the compressed pattern, we will again set c to its remainder when divided 
+by |S|. Now we will loop through the list. During this, c will always represent the number of characters that we still 
+need to step through to arrive at the desired location. At each step, we will check if the character in the current pair 
+(x, y) repeats at least c times. If so, then we step through each of these characters all at once by decrementing c by y 
+and move to the next pair. Otherwise, we will arrive at an occurrence of the character x after the remaining c steps, so 
+we will output that character as the answer. Some care should be taken in the implementation to avoid "off-by-one" indexing 
+errors.
+
+
                     </pre>
                 </div>
             </section>

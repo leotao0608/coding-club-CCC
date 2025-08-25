@@ -79,7 +79,44 @@ current rows.
                 </div>
                 <div id="code-container" class="code-container" style="display: none;">
                     <pre id="code"><code class="language-cpp">
-Coming soon...
+//score: 13/15
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int R, C, M;
+vector&lt;vector&lt;int&gt;&gt; a, dp;
+
+int dfs(int i, int j) {
+    if (j &lt; 0 || j &gt;= C) return 1e9;  
+    if (i == R-1) return a[i][j];          
+    if (dp[i][j] != -1) return dp[i][j];   
+
+    dp[i][j] = a[i][j] + min({dfs(i+1, j), dfs(i+1, j-1), dfs(i+1, j+1)});
+    
+    return dp[i][j];
+}
+
+int main() {
+    cin &gt;&gt; R &gt;&gt; C &gt;&gt; M;
+    a.resize(R, vector&lt;int&gt;(C));
+    dp.assign(R, vector&lt;int&gt;(C, -1));
+
+    int c = 1;
+    for (int i=0; i&lt;R; i++) {
+        for (int j=0; j&lt;C; j++) {
+            a[i][j] = c;
+            c++;
+            if (c &gt; M) c = 1;
+        }
+    }
+
+    int Min = 1e9;
+    for (int j=0; j&lt;C; j++) {
+        Min = min(Min, dfs(0, j));
+    }
+    cout &lt;&lt; Min;
+    return 0;
+}
                     </code></pre>
                 </div>
             </section>
