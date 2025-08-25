@@ -150,3 +150,9 @@ body {
 .intro, .content-section {
     animation: fadeIn 0.5s ease-out;
 }
+p {
+    overflow-wrap: break-word;  
+    word-wrap: break-word;      
+    word-break: break-word;   
+    max-width: 100%;         
+}
