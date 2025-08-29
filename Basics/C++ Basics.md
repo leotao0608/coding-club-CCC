@@ -29,6 +29,7 @@
     + [`for` Loop](#for-loop)
     + [Ranged-based `for` Loop](#ranged-based-for-loop)
     + [`break` and `continue`](#break-and-continue)
+9. [C++ std::](#c-std)
 <br><br>
 <a id="c-syntax"></a>
 <br><br><br><br><br>
@@ -504,7 +505,6 @@ string result = (time < 18) ? "Good day." : "Good evening.";
 cout << result;
 ```
 
-<br><br>
 <a id="c-loops"></a>
 <br><br><br><br><br>
 # 8. C++ Loops
@@ -638,3 +638,38 @@ for (int i = 1; i <= 10; i++) {
 }
 // Output: 1 2 3 5 6 7 8 9 10
 ```
+
+<a id="c-std"></a>
+<br><br><br><br><br>
+# C++ `std::`
+In C++, `std` stands for standard, and `std::` is a **namespace** provided by the C++ Standard Library.  
+
+A **namespace** is a way to group related functions, classes, and objects together and avoid naming conflicts.
+
+C++ has many built-in functions and classes in its standard library, such as:
+- `cout` → for output
+- `cin` → for input
+- `string` → for text
+- `vector` → dynamic arrays
+- `sort()` → sorting algorithms
+
+All of these are in the `std` namespace. There are two ways to use them.
+1. Every standard library object or function is prefixed with `std::`.
+```cpp
+#include<iostream>
+int main(){
+  int a;
+  std::cin >> a;
+  std::cout << a * 2; 
+}
+```
+2. Use `using namespace std;`(Tells the compiler: "I will use everything in the std namespace by default.")
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+  char b;
+  cin>>b; //In this case, std:: is no longer needed.
+}
+```
+>`using namespace std;` is used very common in competitive programming as it saves a lot of time.
