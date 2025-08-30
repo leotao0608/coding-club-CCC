@@ -102,3 +102,12 @@ th {
   background-color: #f2f2f2;
   text-align: left;
 }
+
+blockquote {
+  border-left: 4px solid #98dcf9;
+  padding-left: 12px;
+  color: #555;
+  margin: 1em 0;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
