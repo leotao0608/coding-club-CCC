@@ -1,9 +1,9 @@
-<!--C++ Data Structures-->
+<!--Prefix Sums-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>C++ Data Structures</title>
+  <title>Prefix Sums</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,30 +11,27 @@
   <nav class="nav">
     <div class="nav-container">
         <h1 class="nav-logo">
-          C++ Basics
+            Algorithm Tutorials
         </h1>
     </div>
   </nav>
   <button onclick="window.location.href='../index.html'" id="home-btn" class="nav-button">Home</button>
   <section class="content-section" style="margin-top: 120px;">
-    <header><h1 style="text-align: center;font-size: 40px;">C++ Data Structures</h1></header>
+    <header><h1 style="text-align: center;font-size: 40px;">Prefix Sums</h1></header>
     <main>
       <div id="md-container"></div>
     </main>
   </section>
-
-
+  
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
   <script>
-    
-    fetch('C++ Data Structures.md')
+    fetch('Prefix Sums.md')
       .then(response => response.text())
       .then(text => {
         const container = document.getElementById('md-container');
-        
         container.innerHTML = marked.parse(text);
         container.querySelectorAll('pre code').forEach((block) => {
           hljs.highlightElement(block);
