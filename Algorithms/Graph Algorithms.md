@@ -76,7 +76,7 @@ The length of a path in a weighted graph is the sum of the edge weights on
 the path. For example, in the above graph, the length of the path 1 → 2 → 5 is 12,
 and the length of the path 1 → 3 → 4 → 5 is 11. The latter path is the shortest
 path from node 1 to node 5.
-<a id="neighbors-and-degrees"></
+<a id="neighbors-and-degrees"></a>
 <br><br><br><br><br>
 ## Neighbors and degrees
 Two nodes are **neighbors** or **adjacent** if there is an edge between them. The
@@ -116,7 +116,7 @@ If the graph is **undirected**, it can be stored in a similar way, but each edge
 added in both directions.  
 For a weighted graph, the structure can be extended as follows:  
 ```cpp
-vector<pair<int,int>> adj[N];   //meaning node a connecting to node b in both directions in the pair
+vector<pair<int,int>> adj[N];   //adj[a] contains pairs (neighbor_node, edge_weight)
 ```
 
 In this case, the adjacency list of node a contains the pair (b,w) always when
@@ -124,7 +124,7 @@ there is an edge from node a to node b with weight w. For example, the graph
 <img src="./Photos/graph/11.jpg" alt="" width="220">  
 can be stored as follows:
 ```cpp
-adj[1].push_back({2,5});    //meaning node 1 connecting to node 2 in both directions with a weight 5
+adj[1].push_back({2,5});    // There is a directed edge from node 1 to node 2 with weight 5 (For an undirected graph, you would also need: adj[2].push_back({1,5});)
 adj[2].push_back({3,7});
 adj[2].push_back({4,6});
 adj[3].push_back({4,5});
@@ -260,7 +260,7 @@ Like in depth-first search, the time complexity of breadth-first search is
 *O(n + m)*, where *n* is the number of nodes and *m* is the number of edges.  
 
 Here is a [video](https://drive.google.com/file/d/1O6nI_tjpCIzlq5d8uZCnNaztx6jlGCBl/view?usp=sharing) demonstration.  
-<a id="implementation-1">
+<a id="implementation-1"></a>
 </a><br><br><br><br><br>
 
 ### Implementation

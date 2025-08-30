@@ -34,6 +34,7 @@
       .then(response => response.text())
       .then(text => {
         const container = document.getElementById('md-container');
+        
         container.innerHTML = marked.parse(text);
         container.querySelectorAll('pre code').forEach((block) => {
           hljs.highlightElement(block);

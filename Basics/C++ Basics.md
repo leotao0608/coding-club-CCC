@@ -1,4 +1,4 @@
-# Table of contents:
+# Table of Contents:
 1. [C++ syntax](#c-syntax)
     + [Use of Semi-colons](#use-of-semicolons)
 2. [C++ Statements](#c-statements)
@@ -55,7 +55,7 @@ int main() {
 **Note**:
 - C++ is **case-sensitive**: "cout" and "Cout" has different meaning.   
 - The compiler ignores whitespaces. However, multiple lines makes the code more readable.
-    + Whitespaces include: tab(4 spaces usually), enter(a new line) and space.
+    + Whitespace includes: tabs (usually 4 spaces), newlines, and spaces.
 <a id="use-of-semicolons"></a>
 <br><br><br><br><br>
 ### Use of Semicolons(;)
@@ -69,7 +69,7 @@ Where semi-colons are **required**:
 3. After class/struct definitions
 4. After typedef or using declarations
 
-You will get used on how to use semicolons after seeing more code.
+>You will get used to using semicolons after seeing more code.
 
 #### Try Practicing with this part of code and get familar to the language
 Tips: don't forget semicolons(;) and closing bracket(})
@@ -93,7 +93,7 @@ A computer program is a list of "instructions" to be "executed" by a computer.
 In a programming language, these programming instructions are called statements.
 
 The following statement "instructs" the compiler to print the text "Hello World" to the screen:  
-`cour << "Hello World";`  
+`cout << "Hello World";`  
 
 Most C++ programs contain many statements.  
 The statements are executed, one by one, in the same order as they are written:  
@@ -196,7 +196,7 @@ type variableName = value;
 ```
 You can also declare two or more variables of the same type at the same time.
 ```cpp
-char var1, var2, var3.//variables are seperated bt commas.
+char var1, var2, var3.//Variables are separated by commas.
 ```
 <a id="variable-naming-rules"></a>
 <br><br><br><br><br>
@@ -352,7 +352,7 @@ int main() {
 <br><br><br><br><br>
 ## Comparison Operators
 Comparison operators are used to compare two values (or variables).  
-The **return value** of a comparison is either `1` or `0`, which means `true` (1) or `false` (0), which are **boolean values**
+The result of a comparison is a **boolean** value: `true` (1) or `false` (0).
 | Operator | Example                       | Example     |
 |----------|--------------------------------|-------------|
 | `==`     | Equal to                      | `x == y`    |
@@ -550,14 +550,14 @@ do {
 }
 while (i < 5);
 ```
-The `do while` loop runs at least once even if the condition is false from the begining.
+The `do while` loop runs at least once even if the condition is false from the beginning.
 This is different from a regular `while` loop, which would skip the loop entirely if the condition is false at the start.  
 <br>
 We usually use `while` or `do while` loops when we are given a condition and don't know exactly how many times we want to run the loop for.
 <a id="for-loop"></a>
 <br><br><br><br><br>
 ## `for` Loop
-When you know exactly how many times you want to loop through a block of code, use the for `loop` instead of a `while` loop.
+Use a `for` loop when you know exactly how many times you want to execute a block of code.
 ```cpp
 for (statement 1; statement 2; statement 3) {
   // code block to be executed
@@ -602,7 +602,7 @@ for (int i = 5; i > 0; i--) {
 <br><br><br><br><br>
 ## Ranged-based `for` Loop
 ```cpp
-for (type variableName : arrayName) {
+for (type variableName : container) {
   // code block to be executed
 }
 ```

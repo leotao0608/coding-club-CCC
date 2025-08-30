@@ -16,15 +16,15 @@ type functionName(){
 3. The name of the function is followed by parentheses `()`.
 4. The code to be executed is surrounded by the curly brackets `{}`.  
 
->In must cases, functions should have its unique name.
+>In most cases, functions should have unique names.
 >In C++, functions must be declared before they are used, or else the compiler doesn’t know they exist.
-There are two ways:
+There are two ways:  
 - Define the function before `main()`.(Must commonly used.)
 - OR write a prototype before `main()` and the definition after.
 
 # 2. Call a function
 Declared functions are not executed automaticly. They are "saved for later use", and will only be executed when called upon.  
-To call a function, write the function's name followed by two parentheses `()` and a semicolon `;`.
+To call a function, write the function's name followed by two parentheses `()` and a semicolon `;`.  
 
 In the following example, myFunction() is used to print a text when it is called:
 ```cpp
@@ -38,8 +38,9 @@ int main() {
 }
 
 // Output: "Function executed."
-```cpp
+```
 >A function can be called unlimited times
+```cpp
 void myFunction() {       
   cout << "Function executed.";
 }
@@ -53,7 +54,6 @@ int main() {
 
 // Output: "Function executed.Function executed.Function executed."
 ```
->Note: all functions must be defined after the `main` function
 
 # 3. Function Parameters
 Information can be passed to functions as a parameter. Parameters act as variables inside the function.  
