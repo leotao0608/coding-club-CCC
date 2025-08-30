@@ -1,6 +1,6 @@
 >Time complexity is important to understand for junior participants, and especially crucial for senior participants.<br>
 Starting from question 5 in the junior section, and from question 3 in the senior section, time complexity needs to be taken into consideration.<br>If a program with high time complexity is submitted, it will result in TLE (Time Limit Exceeded) during compilation.
-Therefore, it is essential to consider the time complexity of a certain algorith and the problem requirements when trying to implement it.
+Therefore, it is essential to consider the time complexity of a certain algorithm and the problem requirements when trying to implement it.
 
 # Time Complexity
 The efficiency of algorithms is important in competitive programming. Usually, it is easy to design an algorithm that solves the problem slowly, but the real challenge is to invent a fast algorithm. If the algorithm is too slow, it will get only partial points or no points at all.  
