@@ -150,3 +150,61 @@ meal = "Burger"; // changes both meal and food
 cout << food; // Output: Burger
 cout << meal; // Output: Burger
 ```
+
+# 5. Recursion
+Recursion is the technique of making a function call itself.  
+This technique provides a way to break complicated problems down into simple problems which are easier to solve.  
+
+### Two Key Rules of Recursion
+
+1. **Base Case**: The condition where the function stops calling itself. (Without this, recursion will run forever and cause a crash.)
+
+2. **Recursive Case**: The step where the function calls itself with a simpler or smaller problem, moving closer to the base case.
+
+**Example 1: Count Down**  
+```cpp
+#include <iostream>
+using namespace std;
+void countdown(int n) {
+    if (n == 0) {               // Base case
+        cout << "Exit" << endl;
+        return;
+    }
+    cout << n << endl;          // Print current value
+    countdown(n - 1);           // Recursive case: smaller problem
+}
+int main() {
+    countdown(5);
+    return 0;
+}
+/* Output:
+5
+4
+3
+2
+1
+Exit
+*/
+```
+**Example 2: Factorial**  
+Mathmatical Defination:
+```
+n! = n * (n - 1) * (n - 2) * (n - 3) * ... * 1
+```
+Recursive Function:
+```cpp
+int factorial(int n) {
+    if (n == 1) return 1;   // Base case
+    return n * factorial(n - 1);      // Recursive case
+}
+```
+Explanation for `factorial(5)`:
+```
+factorial(5)
+= 5 * factorial(4)
+= 5 * (4 * factorial(3))
+= 5 * (4 * (3 * factorial(2)))
+= 5 * (4 * (3 * (2 * factorial(1))))
+= 5 * 4 * 3 * 2 * 1
+= 120
+```
