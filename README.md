@@ -10,10 +10,13 @@ This website provides information about Canadian Computing Competition (CCC), in
   - View strategies and code examples.
 - **Tutorials**
   - C++ basics
-  - Functions
+  - C++ Data structures
+  - C++ Functions
   - Greedy Algorithms
   - Graph Algorithms
   - Sorting Methods
+  - Prefix Sums
+  - Dynamic Programming
 - **Interactive code display**
   - Syntax-highlighted code blocks
   - Show/hide problem approaches
