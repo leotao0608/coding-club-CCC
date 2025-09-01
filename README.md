@@ -9,9 +9,11 @@ This website provides information about Canadian Computing Competition (CCC), in
   - Select a year and problem number to view.
   - View strategies and code examples.
 - **Tutorials**
-  - C++ basics
+  - Getting Started
+  - C++ Basics
   - C++ Data structures
   - C++ Functions
+  - Time Complexity
   - Greedy Algorithms
   - Graph Algorithms
   - Sorting Methods
