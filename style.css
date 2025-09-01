@@ -8,7 +8,6 @@
     --transition-speed: 0.3s;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +57,7 @@ body {
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 .intro-text {
