@@ -27,7 +27,7 @@
     + [`while` Loop](#while-loop)
     + [`do while` Loop](#do-while-loop)
     + [`for` Loop](#for-loop)
-    + [Ranged-based `for` Loop](#ranged-based-for-loop)
+    + [Range-based `for` Loop](#rangeinfront-based-for-loop)
     + [`break` and `continue`](#break-and-continue)
 9. [C++ std::](#c-std)
 <br><br>
@@ -53,7 +53,7 @@ int main() {
 
 
 **Note**:
-- C++ is **case-sensitive**: "cout" and "Cout" has different meaning.   
+- C++ is **case-sensitive**: "cout" and "Cout" have different meaning.   
 - The compiler ignores whitespaces. However, multiple lines makes the code more readable.
     + Whitespace includes: tabs (usually 4 spaces), newlines, and spaces.
 <a id="use-of-semicolons"></a>
@@ -63,7 +63,7 @@ In C++, a semicolon marks the end of a complete statement (often called a **stat
 It tells the compiler:
 >“This instruction is done — now move on to the next one.”  
 
-Where semi-colons are **required**:  
+Where semicolons are **required**:  
 1. End of most executable statements
 2. After variable declarations
 3. After class/struct definitions
@@ -71,7 +71,7 @@ Where semi-colons are **required**:
 
 >You will get used to using semicolons after seeing more code.
 
-#### Try Practicing with this part of code and get familar to the language
+#### Try Practicing with this part of code and get familiar with the language
 Tips: don't forget semicolons(;) and closing bracket(})
 <textarea id="code-editor" style="width:100%;height:200px;font-family:monospace;">
 #include <iostream>
@@ -132,7 +132,7 @@ Both are part of the `<iostream>` library.
 cout << data;
 ```
 + `<<` is called the **insertion** operator (inserts data into the output stream).
-+ "data" can be anything, from a string of charactors to a number.  
++ "data" can be anything, from a string of characters to a number.  
 You can chain outputs:
 ```cpp
 cout << a << b << c << d;
@@ -182,7 +182,7 @@ In C++, there are five main types of variables (defined with different keywords)
 1. `int`: stores integers (whole numbers), without decimals, such as 1, 2, -5, 100.
 2. `double`: stores floating point numbers, with decimals, such as 1.5, -4.8, 3.14159
 3. `char`: stores single characters, such as 'a', 'B', '.', '-'. Char values are surrounded by **single quotes**(`''`).
-4. `string`: stores a list of charactors, such as "Hello World", "bewivbwiv", "8h6+f5-!", "aa". String values are surrounded by **double quotes**(`""`).
+4. `string`: stores a list of characters, such as "Hello World", "bewivbwiv", "8h6+f5-!", "aa". String values are surrounded by **double quotes**(`""`).
 5. `bool`: stores values with two states: `true` or `false` (or `1` and `0`)
 <a id="declaring-variables"></a>
 <br><br><br><br><br>
@@ -196,7 +196,7 @@ type variableName = value;
 ```
 You can also declare two or more variables of the same type at the same time.
 ```cpp
-char var1, var2, var3.//Variables are separated by commas.
+char var1, var2, var3;//Variables are separated by commas.
 ```
 <a id="variable-naming-rules"></a>
 <br><br><br><br><br>
@@ -230,7 +230,7 @@ cout << a;  //Output: 5
 <a id="constant-variables"></a>
 <br><br><br><br><br>
 ## Constant Variables
-When you do not want the value of a variable to be changed, you can use the keyword `const` infront of the type of variable when declaring it.
+When you do not want the value of a variable to be changed, you can use the keyword `const` in front of the type of variable when declaring it.
 For example:
 ```cpp
 const int a = 10; //a will always be 10.
@@ -598,9 +598,9 @@ for (int i = 5; i > 0; i--) {
   cout << i << "\n";    //This example prints a countdown from 5 to 1:
 }
 ```
-<a id="ranged-based-for-loop"></a>
+<a id="range-based-for-loop"></a>
 <br><br><br><br><br>
-## Ranged-based `for` Loop
+## Range-based `for` Loop
 ```cpp
 for (type variableName : container) {
   // code block to be executed

@@ -3,7 +3,7 @@
 A **greedy** algorithm constructs a solution to the problem by always making a choice that looks the best at the moment. A greedy algorithm never takes back its choices, but directly constructs the final solution. For this reason, greedy algorithms are usually very efficient.  
 Greedy does not refer to a single algorithm, but rather a way of thinking that is applied to problems; there's no one way to do greedy algorithms. Hence, we use a selection of well-known examples to help you understand the greedy paradigm.
 ***
-**Try this problem to get a general idea of greedy algrithm.**  
+**Try this problem to get a general idea of greedy algorithm.**  
 [[Mad Scientist]](http://www.usaco.org/index.php?page=viewproblem2&cpid=1012)  
 
 In this problem, the correct greedy solution is to continually flip the longest possible ranges of mismatching cows.
@@ -31,7 +31,7 @@ int main() {
 
 	/*
 	 * count the number of times [false, true] occurs in diff
-	 * this is equivalent to the number of continous segments of trues
+	 * this is equivalent to the number of continuous segments of trues
 	 * that extra false at the beginning comes in handy here,
 	 * since if we didn't have it we've have to have an edge case for
 	 * the first segment that doesn't have a preceding false

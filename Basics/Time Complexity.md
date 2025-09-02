@@ -42,15 +42,15 @@ a loop is executed, but it only shows the order of magnitude. In the following
 examples, the code inside the loop is executed `3n`, `n+5` and `n/2` times, but the
 time complexity of each code is `O(n)`.
 ```cpp
-//Exampe 1: Time Complexity: O(n)
+//Example 1: Time Complexity: O(n)
 for (int i = 1; i <= 3*n; i++) {
     // code
 }
-//Exampe 3: Time Complexity: O(n)
+//Example 3: Time Complexity: O(n)
 for (int i = 1; i <= n+5; i++) {
     // code
 }
-//Exampe 3: Time Complexity: O(n)
+//Example 3: Time Complexity: O(n)
 for (int i = 1; i <= n; i += 2) {
     // code
 }

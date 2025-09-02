@@ -5,7 +5,7 @@ Functions are used to perform certain actions, and they are important for reusin
 
 # 1. Declare a Function
 C++ provides some pre-defined functions, such as `main()`, which is used to execute code. But you can also create your own functions to perform certain actions.  
-To declare(create) a function, put the type of the function in the front, specify the name of the function, followed by parentheses ():  
+To declare (create) a function, put the type of the function in the front, specify the name of the function, followed by parentheses ():  
 ```cpp
 type functionName(){
     // code to be executed
